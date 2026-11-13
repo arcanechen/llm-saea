@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.6,
+    "crossover": 0.8,
+    "exploration": 0.45,
+    "local_fraction": 0.25,
+    "radius": 0.15,
+    "population": 30,
+    "generations": 5,
+    "reason": "With only 24 of 100 evaluations consumed and stagnation of 20 at zero recent improvement, the search is still early and needs moderate exploration to escape flat regions. Auto surrogate adapts model choice via held-out RMSE, which is safer than committing to RBF or quadratic at low sample counts. current_to_best balances convergence toward the incumbent with diversity; a moderate mutation (0.6) and high crossover (0.8) give productive recombination without excessive disruption. Exploration 0.45 leans mildly toward novelty since progress has stalled, while a small local_fraction and moderate radius focus refinement only after promising basins are found. Population 30 and 5 generations keep the surrogate-driven inner loop cheap relative to the remaining budget."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/ackley_d10/llm/seed_0/result.json",
+    "independent_online_trial": false
+  }
+}

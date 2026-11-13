@@ -1,0 +1,45 @@
+{
+  "problem": "ellipsoid",
+  "method": "saea",
+  "seed": 3,
+  "best_y": 773.82401910587,
+  "best_x": [
+    1.5844645685703842,
+    -1.6357101293368648,
+    0.5023106106051367,
+    -0.10894429327564126,
+    -0.007685246830999581
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.3719641000006959,
+  "objective_seconds": 0.002403399998001987,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "online_llm": false,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.65,
+        "crossover": 0.85,
+        "exploration": 0.2,
+        "local_fraction": 0.3,
+        "radius": 0.12,
+        "population": 40,
+        "generations": 6,
+        "reason": "Fixed reference design."
+      },
+      "source": "saea"
+    }
+  ]
+}

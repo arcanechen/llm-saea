@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.6,
+    "crossover": 0.8,
+    "exploration": 0.35,
+    "local_fraction": 0.35,
+    "radius": 0.15,
+    "population": 24,
+    "generations": 5,
+    "reason": "Very tight budget (25 evals) in 2D with no observations yet: auto surrogate lets held-out RMSE pick RBF vs quadratic as data arrives. current_to_best with moderate mutation/crossover balances convergence and diversity. Modest exploration (0.35) keeps some initial sampling while distance-novelty avoids clustering; small population and few generations keep surrogate overhead low so true evaluations go to promising candidates."
+  },
+  "provenance": {
+    "source": "deepseek",
+    "model": "deepseek-flash",
+    "log_directory": "submission\\03_experiments\\deepseek_smoke\\generated_algorithm.llm_logs"
+  }
+}

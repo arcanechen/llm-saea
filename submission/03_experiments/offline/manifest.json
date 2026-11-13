@@ -1,0 +1,48 @@
+{
+  "started_utc": "2026-10-23T02:44:09.759675+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "parameters": {
+    "output": ".\\submission\\03_experiments\\offline",
+    "functions": [
+      "sphere",
+      "ellipsoid",
+      "rosenbrock",
+      "rastrigin",
+      "ackley",
+      "griewank"
+    ],
+    "dimensions": [
+      5,
+      10
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "methods": [
+      "random",
+      "de",
+      "saea",
+      "adaptive"
+    ],
+    "budget": 100,
+    "model": null,
+    "env_file": null
+  },
+  "objective_delay_seconds": 0,
+  "protocol": "Six analytic functions, equal true-evaluation budget, common initial LHS per seed.",
+  "llm_status": "NOT_RUN",
+  "packages": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "openai": "3.37.0"
+  },
+  "completed_utc": "2026-10-23T02:44:57.079126+00:00",
+  "completed_runs": 240
+}

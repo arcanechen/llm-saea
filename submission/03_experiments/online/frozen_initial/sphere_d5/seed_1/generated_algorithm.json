@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.8,
+    "crossover": 0.9,
+    "exploration": 0.6,
+    "local_fraction": 0.25,
+    "radius": 0.2,
+    "population": 30,
+    "generations": 8,
+    "reason": "Stagnation is high (19) with zero recent improvement, so exploration is increased from 0.2 to 0.6 and radius widened to 0.2 to inject novelty and escape the stuck basin. auto keeps surrogate choice data-driven via held-out RMSE. current_to_best with a slightly higher mutation biases toward the best while retaining diversity; larger population and more generations give the surrogate more candidate coverage per expensive evaluation, and local_fraction stays moderate to preserve global exploration early in the 100-eval budget."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/sphere_d5/llm/seed_1/result.json",
+    "independent_online_trial": false
+  }
+}

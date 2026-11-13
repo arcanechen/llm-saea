@@ -1,0 +1,98 @@
+{
+  "problem": "sphere",
+  "method": "adaptive",
+  "seed": 4,
+  "best_y": 1.3940330263445766,
+  "best_x": [
+    -0.20761160527474676,
+    0.061743834416648546,
+    -0.2979354241289167,
+    0.4247646781324761,
+    -0.14436888777094659,
+    0.1783306402490945,
+    0.6020419304741464,
+    0.2943090568026996,
+    0.7539021009422537,
+    0.08855913331406029
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.3957137999987026,
+  "objective_seconds": 0.0012043000115227187,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 4,
+    "online_llm": false,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.65,
+        "crossover": 0.85,
+        "exploration": 0.19,
+        "local_fraction": 0.5,
+        "radius": 0.1368,
+        "population": 40,
+        "generations": 6,
+        "reason": "Offline rules: increase global exploration after 12 unimproved evaluations."
+      },
+      "source": "adaptive"
+    },
+    {
+      "at_evaluation": 44,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.65,
+        "crossover": 0.85,
+        "exploration": 0.14,
+        "local_fraction": 0.5,
+        "radius": 0.1008,
+        "population": 40,
+        "generations": 6,
+        "reason": "Offline rules: increase global exploration after 12 unimproved evaluations."
+      },
+      "source": "adaptive"
+    },
+    {
+      "at_evaluation": 64,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "rand1",
+        "mutation": 0.65,
+        "crossover": 0.85,
+        "exploration": 0.65,
+        "local_fraction": 0.15,
+        "radius": 0.25,
+        "population": 40,
+        "generations": 6,
+        "reason": "Offline rules: increase global exploration after 12 unimproved evaluations."
+      },
+      "source": "adaptive"
+    },
+    {
+      "at_evaluation": 84,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "rand1",
+        "mutation": 0.65,
+        "crossover": 0.85,
+        "exploration": 0.65,
+        "local_fraction": 0.15,
+        "radius": 0.25,
+        "population": 40,
+        "generations": 6,
+        "reason": "Offline rules: increase global exploration after 12 unimproved evaluations."
+      },
+      "source": "adaptive"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "problem": "ellipsoid",
+  "method": "saea",
+  "seed": 3,
+  "best_y": 73404.94381582322,
+  "best_x": [
+    4.832042282010988,
+    -2.5885108157766346,
+    -1.3928980057362095,
+    -3.7376234642301407,
+    -0.16036870280299986,
+    3.2732837784124094,
+    1.3397891784499327,
+    0.5997488738276076,
+    -0.1665215108781135,
+    0.09053243533083766
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.3760994000003848,
+  "objective_seconds": 0.0022949000049266033,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/ellipsoid_d10/llm/seed_3/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "rand1",
+        "mutation": 0.9,
+        "crossover": 0.7,
+        "exploration": 0.6,
+        "local_fraction": 0.15,
+        "radius": 0.2,
+        "population": 30,
+        "generations": 8,
+        "reason": "With only 24 of 100 evaluations used and 22 stagnant steps in 10D, the search is data-poor and likely stuck exploiting a narrow region. Switching to rand1 with higher mutation and exploration increases diversity and novelty-driven sampling, while auto surrogate handles the small-sample model choice via held-out RMSE. Lower local_fraction and wider radius reduce premature convergence before more data accumulates; population 30 with 8 generations balances surrogate-guided candidate generation against the remaining fixed budget."
+      },
+      "source": "saea"
+    }
+  ]
+}

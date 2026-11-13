@@ -1,0 +1,240 @@
+001 sphere       d= 5 seed=0 random   best=6.58261 time=0.01s
+002 sphere       d= 5 seed=0 de       best=5.31944 time=0.00s
+003 sphere       d= 5 seed=0 saea     best=0.0429337 time=0.37s
+004 sphere       d= 5 seed=0 adaptive best=0.016289 time=0.36s
+005 sphere       d= 5 seed=1 random   best=5.6026 time=0.00s
+006 sphere       d= 5 seed=1 de       best=8.24365 time=0.00s
+007 sphere       d= 5 seed=1 saea     best=0.0398234 time=0.35s
+008 sphere       d= 5 seed=1 adaptive best=0.0924735 time=0.35s
+009 sphere       d= 5 seed=2 random   best=8.71438 time=0.00s
+010 sphere       d= 5 seed=2 de       best=8.71438 time=0.00s
+011 sphere       d= 5 seed=2 saea     best=0.0849154 time=0.36s
+012 sphere       d= 5 seed=2 adaptive best=0.111764 time=0.34s
+013 sphere       d= 5 seed=3 random   best=7.72173 time=0.00s
+014 sphere       d= 5 seed=3 de       best=1.26994 time=0.00s
+015 sphere       d= 5 seed=3 saea     best=0.0510348 time=0.36s
+016 sphere       d= 5 seed=3 adaptive best=0.0888323 time=0.34s
+017 sphere       d= 5 seed=4 random   best=12.5366 time=0.00s
+018 sphere       d= 5 seed=4 de       best=4.81885 time=0.00s
+019 sphere       d= 5 seed=4 saea     best=0.103984 time=0.36s
+020 sphere       d= 5 seed=4 adaptive best=0.064505 time=0.35s
+021 sphere       d=10 seed=0 random   best=16.8616 time=0.00s
+022 sphere       d=10 seed=0 de       best=24.8677 time=0.00s
+023 sphere       d=10 seed=0 saea     best=1.53542 time=0.41s
+024 sphere       d=10 seed=0 adaptive best=0.520063 time=0.37s
+025 sphere       d=10 seed=1 random   best=21.9208 time=0.00s
+026 sphere       d=10 seed=1 de       best=21.9208 time=0.00s
+027 sphere       d=10 seed=1 saea     best=1.82535 time=0.41s
+028 sphere       d=10 seed=1 adaptive best=0.128985 time=0.39s
+029 sphere       d=10 seed=2 random   best=38.6967 time=0.00s
+030 sphere       d=10 seed=2 de       best=36.3422 time=0.00s
+031 sphere       d=10 seed=2 saea     best=1.25043 time=0.39s
+032 sphere       d=10 seed=2 adaptive best=0.154879 time=0.39s
+033 sphere       d=10 seed=3 random   best=22.5523 time=0.00s
+034 sphere       d=10 seed=3 de       best=34.0492 time=0.00s
+035 sphere       d=10 seed=3 saea     best=1.62287 time=0.41s
+036 sphere       d=10 seed=3 adaptive best=1.63899 time=0.38s
+037 sphere       d=10 seed=4 random   best=40.365 time=0.00s
+038 sphere       d=10 seed=4 de       best=30.6798 time=0.00s
+039 sphere       d=10 seed=4 saea     best=1.35589 time=0.40s
+040 sphere       d=10 seed=4 adaptive best=1.39403 time=0.40s
+041 ellipsoid    d= 5 seed=0 random   best=176360 time=0.00s
+042 ellipsoid    d= 5 seed=0 de       best=50542.1 time=0.00s
+043 ellipsoid    d= 5 seed=0 saea     best=253.997 time=0.36s
+044 ellipsoid    d= 5 seed=0 adaptive best=283.245 time=0.37s
+045 ellipsoid    d= 5 seed=1 random   best=55506.6 time=0.00s
+046 ellipsoid    d= 5 seed=1 de       best=18715.7 time=0.00s
+047 ellipsoid    d= 5 seed=1 saea     best=134.618 time=0.36s
+048 ellipsoid    d= 5 seed=1 adaptive best=1174.45 time=0.34s
+049 ellipsoid    d= 5 seed=2 random   best=74211.1 time=0.00s
+050 ellipsoid    d= 5 seed=2 de       best=10289.8 time=0.00s
+051 ellipsoid    d= 5 seed=2 saea     best=440.971 time=0.37s
+052 ellipsoid    d= 5 seed=2 adaptive best=3621.15 time=0.34s
+053 ellipsoid    d= 5 seed=3 random   best=38549.9 time=0.00s
+054 ellipsoid    d= 5 seed=3 de       best=23388.6 time=0.00s
+055 ellipsoid    d= 5 seed=3 saea     best=773.824 time=0.37s
+056 ellipsoid    d= 5 seed=3 adaptive best=2380.73 time=0.36s
+057 ellipsoid    d= 5 seed=4 random   best=35334.8 time=0.00s
+058 ellipsoid    d= 5 seed=4 de       best=35334.8 time=0.00s
+059 ellipsoid    d= 5 seed=4 saea     best=1417.16 time=0.37s
+060 ellipsoid    d= 5 seed=4 adaptive best=297.808 time=0.36s
+061 ellipsoid    d=10 seed=0 random   best=486447 time=0.00s
+062 ellipsoid    d=10 seed=0 de       best=323414 time=0.00s
+063 ellipsoid    d=10 seed=0 saea     best=10066.4 time=0.40s
+064 ellipsoid    d=10 seed=0 adaptive best=18854.2 time=0.39s
+065 ellipsoid    d=10 seed=1 random   best=188595 time=0.00s
+066 ellipsoid    d=10 seed=1 de       best=377051 time=0.00s
+067 ellipsoid    d=10 seed=1 saea     best=19496.2 time=0.39s
+068 ellipsoid    d=10 seed=1 adaptive best=7129.83 time=0.38s
+069 ellipsoid    d=10 seed=2 random   best=236746 time=0.00s
+070 ellipsoid    d=10 seed=2 de       best=457316 time=0.00s
+071 ellipsoid    d=10 seed=2 saea     best=11445 time=0.41s
+072 ellipsoid    d=10 seed=2 adaptive best=42736.4 time=0.39s
+073 ellipsoid    d=10 seed=3 random   best=446150 time=0.00s
+074 ellipsoid    d=10 seed=3 de       best=101715 time=0.00s
+075 ellipsoid    d=10 seed=3 saea     best=34867.3 time=0.40s
+076 ellipsoid    d=10 seed=3 adaptive best=4159.26 time=0.39s
+077 ellipsoid    d=10 seed=4 random   best=538911 time=0.00s
+078 ellipsoid    d=10 seed=4 de       best=252582 time=0.00s
+079 ellipsoid    d=10 seed=4 saea     best=24737.3 time=0.41s
+080 ellipsoid    d=10 seed=4 adaptive best=73571.8 time=0.40s
+081 rosenbrock   d= 5 seed=0 random   best=45.4127 time=0.00s
+082 rosenbrock   d= 5 seed=0 de       best=89.7348 time=0.00s
+083 rosenbrock   d= 5 seed=0 saea     best=12.0089 time=0.36s
+084 rosenbrock   d= 5 seed=0 adaptive best=5.91943 time=0.38s
+085 rosenbrock   d= 5 seed=1 random   best=44.9206 time=0.00s
+086 rosenbrock   d= 5 seed=1 de       best=44.9206 time=0.00s
+087 rosenbrock   d= 5 seed=1 saea     best=2.8844 time=0.37s
+088 rosenbrock   d= 5 seed=1 adaptive best=3.34927 time=0.35s
+089 rosenbrock   d= 5 seed=2 random   best=98.9261 time=0.00s
+090 rosenbrock   d= 5 seed=2 de       best=46.8762 time=0.00s
+091 rosenbrock   d= 5 seed=2 saea     best=4.61759 time=0.37s
+092 rosenbrock   d= 5 seed=2 adaptive best=3.98988 time=0.36s
+093 rosenbrock   d= 5 seed=3 random   best=115.954 time=0.00s
+094 rosenbrock   d= 5 seed=3 de       best=45.6901 time=0.00s
+095 rosenbrock   d= 5 seed=3 saea     best=4.84708 time=0.37s
+096 rosenbrock   d= 5 seed=3 adaptive best=3.92762 time=0.37s
+097 rosenbrock   d= 5 seed=4 random   best=188.64 time=0.00s
+098 rosenbrock   d= 5 seed=4 de       best=29.7614 time=0.00s
+099 rosenbrock   d= 5 seed=4 saea     best=6.18249 time=0.37s
+100 rosenbrock   d= 5 seed=4 adaptive best=3.77198 time=0.37s
+101 rosenbrock   d=10 seed=0 random   best=307.72 time=0.00s
+102 rosenbrock   d=10 seed=0 de       best=735.359 time=0.00s
+103 rosenbrock   d=10 seed=0 saea     best=36.8034 time=0.39s
+104 rosenbrock   d=10 seed=0 adaptive best=30.5605 time=0.37s
+105 rosenbrock   d=10 seed=1 random   best=551.136 time=0.00s
+106 rosenbrock   d=10 seed=1 de       best=406.149 time=0.00s
+107 rosenbrock   d=10 seed=1 saea     best=80.6525 time=0.39s
+108 rosenbrock   d=10 seed=1 adaptive best=80.3133 time=0.38s
+109 rosenbrock   d=10 seed=2 random   best=565.893 time=0.00s
+110 rosenbrock   d=10 seed=2 de       best=565.893 time=0.00s
+111 rosenbrock   d=10 seed=2 saea     best=49.557 time=0.38s
+112 rosenbrock   d=10 seed=2 adaptive best=52.7395 time=0.37s
+113 rosenbrock   d=10 seed=3 random   best=334.954 time=0.00s
+114 rosenbrock   d=10 seed=3 de       best=582.546 time=0.00s
+115 rosenbrock   d=10 seed=3 saea     best=37.3796 time=0.39s
+116 rosenbrock   d=10 seed=3 adaptive best=34.3287 time=0.38s
+117 rosenbrock   d=10 seed=4 random   best=1342.88 time=0.00s
+118 rosenbrock   d=10 seed=4 de       best=862.238 time=0.00s
+119 rosenbrock   d=10 seed=4 saea     best=100.099 time=0.38s
+120 rosenbrock   d=10 seed=4 adaptive best=88.4171 time=0.38s
+121 rastrigin    d= 5 seed=0 random   best=40.7996 time=0.00s
+122 rastrigin    d= 5 seed=0 de       best=43.767 time=0.00s
+123 rastrigin    d= 5 seed=0 saea     best=24.0766 time=0.36s
+124 rastrigin    d= 5 seed=0 adaptive best=20.8488 time=0.34s
+125 rastrigin    d= 5 seed=1 random   best=25.6348 time=0.00s
+126 rastrigin    d= 5 seed=1 de       best=38.5369 time=0.00s
+127 rastrigin    d= 5 seed=1 saea     best=20.9072 time=0.36s
+128 rastrigin    d= 5 seed=1 adaptive best=24.8428 time=0.35s
+129 rastrigin    d= 5 seed=2 random   best=43.8327 time=0.00s
+130 rastrigin    d= 5 seed=2 de       best=43.8327 time=0.00s
+131 rastrigin    d= 5 seed=2 saea     best=23.8178 time=0.36s
+132 rastrigin    d= 5 seed=2 adaptive best=17.1448 time=0.34s
+133 rastrigin    d= 5 seed=3 random   best=25.9063 time=0.00s
+134 rastrigin    d= 5 seed=3 de       best=27.2462 time=0.00s
+135 rastrigin    d= 5 seed=3 saea     best=13.3915 time=0.37s
+136 rastrigin    d= 5 seed=3 adaptive best=10.0231 time=0.33s
+137 rastrigin    d= 5 seed=4 random   best=36.5056 time=0.00s
+138 rastrigin    d= 5 seed=4 de       best=21.5705 time=0.00s
+139 rastrigin    d= 5 seed=4 saea     best=22.9594 time=0.36s
+140 rastrigin    d= 5 seed=4 adaptive best=24.7731 time=0.36s
+141 rastrigin    d=10 seed=0 random   best=102.41 time=0.00s
+142 rastrigin    d=10 seed=0 de       best=118.446 time=0.00s
+143 rastrigin    d=10 seed=0 saea     best=83.1257 time=0.38s
+144 rastrigin    d=10 seed=0 adaptive best=83.5067 time=0.37s
+145 rastrigin    d=10 seed=1 random   best=101.446 time=0.00s
+146 rastrigin    d=10 seed=1 de       best=101.446 time=0.00s
+147 rastrigin    d=10 seed=1 saea     best=57.5759 time=0.39s
+148 rastrigin    d=10 seed=1 adaptive best=65.045 time=0.36s
+149 rastrigin    d=10 seed=2 random   best=125.205 time=0.00s
+150 rastrigin    d=10 seed=2 de       best=109.218 time=0.00s
+151 rastrigin    d=10 seed=2 saea     best=84.3043 time=0.38s
+152 rastrigin    d=10 seed=2 adaptive best=68.6778 time=0.37s
+153 rastrigin    d=10 seed=3 random   best=94.0724 time=0.00s
+154 rastrigin    d=10 seed=3 de       best=99.2684 time=0.00s
+155 rastrigin    d=10 seed=3 saea     best=80.0107 time=0.38s
+156 rastrigin    d=10 seed=3 adaptive best=75.0328 time=0.37s
+157 rastrigin    d=10 seed=4 random   best=109.508 time=0.00s
+158 rastrigin    d=10 seed=4 de       best=116.145 time=0.00s
+159 rastrigin    d=10 seed=4 saea     best=82.9764 time=0.39s
+160 rastrigin    d=10 seed=4 adaptive best=104.424 time=0.39s
+161 ackley       d= 5 seed=0 random   best=5.77549 time=0.00s
+162 ackley       d= 5 seed=0 de       best=5.37903 time=0.00s
+163 ackley       d= 5 seed=0 saea     best=1.89239 time=0.37s
+164 ackley       d= 5 seed=0 adaptive best=1.69713 time=0.34s
+165 ackley       d= 5 seed=1 random   best=4.8287 time=0.00s
+166 ackley       d= 5 seed=1 de       best=5.7254 time=0.00s
+167 ackley       d= 5 seed=1 saea     best=1.39214 time=0.36s
+168 ackley       d= 5 seed=1 adaptive best=2.02097 time=0.36s
+169 ackley       d= 5 seed=2 random   best=6.48162 time=0.00s
+170 ackley       d= 5 seed=2 de       best=6.48162 time=0.00s
+171 ackley       d= 5 seed=2 saea     best=1.21383 time=0.36s
+172 ackley       d= 5 seed=2 adaptive best=2.3811 time=0.35s
+173 ackley       d= 5 seed=3 random   best=6.23114 time=0.00s
+174 ackley       d= 5 seed=3 de       best=4.24885 time=0.00s
+175 ackley       d= 5 seed=3 saea     best=2.1646 time=0.37s
+176 ackley       d= 5 seed=3 adaptive best=2.53047 time=0.34s
+177 ackley       d= 5 seed=4 random   best=6.88802 time=0.00s
+178 ackley       d= 5 seed=4 de       best=4.09176 time=0.00s
+179 ackley       d= 5 seed=4 saea     best=1.71462 time=0.37s
+180 ackley       d= 5 seed=4 adaptive best=2.52811 time=0.37s
+181 ackley       d=10 seed=0 random   best=6.29012 time=0.00s
+182 ackley       d=10 seed=0 de       best=7.06747 time=0.01s
+183 ackley       d=10 seed=0 saea     best=3.3225 time=0.38s
+184 ackley       d=10 seed=0 adaptive best=2.63656 time=0.37s
+185 ackley       d=10 seed=1 random   best=6.54045 time=0.00s
+186 ackley       d=10 seed=1 de       best=6.54045 time=0.00s
+187 ackley       d=10 seed=1 saea     best=2.56793 time=0.41s
+188 ackley       d=10 seed=1 adaptive best=2.97015 time=0.40s
+189 ackley       d=10 seed=2 random   best=8.40803 time=0.00s
+190 ackley       d=10 seed=2 de       best=7.97989 time=0.00s
+191 ackley       d=10 seed=2 saea     best=3.32039 time=0.43s
+192 ackley       d=10 seed=2 adaptive best=2.81371 time=0.40s
+193 ackley       d=10 seed=3 random   best=6.65236 time=0.00s
+194 ackley       d=10 seed=3 de       best=7.73988 time=0.00s
+195 ackley       d=10 seed=3 saea     best=2.37312 time=0.44s
+196 ackley       d=10 seed=3 adaptive best=3.77406 time=0.45s
+197 ackley       d=10 seed=4 random   best=8.25256 time=0.00s
+198 ackley       d=10 seed=4 de       best=7.76429 time=0.00s
+199 ackley       d=10 seed=4 saea     best=3.42345 time=0.42s
+200 ackley       d=10 seed=4 adaptive best=2.65221 time=0.43s
+201 griewank     d= 5 seed=0 random   best=1.08689 time=0.00s
+202 griewank     d= 5 seed=0 de       best=0.695752 time=0.00s
+203 griewank     d= 5 seed=0 saea     best=0.402955 time=0.37s
+204 griewank     d= 5 seed=0 adaptive best=0.601778 time=0.35s
+205 griewank     d= 5 seed=1 random   best=0.316233 time=0.00s
+206 griewank     d= 5 seed=1 de       best=1.01659 time=0.00s
+207 griewank     d= 5 seed=1 saea     best=0.792975 time=0.38s
+208 griewank     d= 5 seed=1 adaptive best=0.660433 time=0.35s
+209 griewank     d= 5 seed=2 random   best=1.13011 time=0.00s
+210 griewank     d= 5 seed=2 de       best=0.939688 time=0.00s
+211 griewank     d= 5 seed=2 saea     best=0.525578 time=0.40s
+212 griewank     d= 5 seed=2 adaptive best=0.659062 time=0.38s
+213 griewank     d= 5 seed=3 random   best=1.16844 time=0.00s
+214 griewank     d= 5 seed=3 de       best=1.09009 time=0.00s
+215 griewank     d= 5 seed=3 saea     best=0.834544 time=0.38s
+216 griewank     d= 5 seed=3 adaptive best=0.490699 time=0.36s
+217 griewank     d= 5 seed=4 random   best=1.16481 time=0.00s
+218 griewank     d= 5 seed=4 de       best=1.1349 time=0.00s
+219 griewank     d= 5 seed=4 saea     best=0.676145 time=0.39s
+220 griewank     d= 5 seed=4 adaptive best=0.466523 time=0.38s
+221 griewank     d=10 seed=0 random   best=1.42723 time=0.00s
+222 griewank     d=10 seed=0 de       best=1.62171 time=0.00s
+223 griewank     d=10 seed=0 saea     best=1.02512 time=0.42s
+224 griewank     d=10 seed=0 adaptive best=0.898982 time=0.40s
+225 griewank     d=10 seed=1 random   best=1.54303 time=0.00s
+226 griewank     d=10 seed=1 de       best=1.54303 time=0.00s
+227 griewank     d=10 seed=1 saea     best=1.05574 time=0.49s
+228 griewank     d=10 seed=1 adaptive best=1.01229 time=0.42s
+229 griewank     d=10 seed=2 random   best=1.96742 time=0.00s
+230 griewank     d=10 seed=2 de       best=1.90479 time=0.00s
+231 griewank     d=10 seed=2 saea     best=1.01825 time=0.40s
+232 griewank     d=10 seed=2 adaptive best=0.948198 time=0.43s
+233 griewank     d=10 seed=3 random   best=1.56944 time=0.00s
+234 griewank     d=10 seed=3 de       best=1.85123 time=0.00s
+235 griewank     d=10 seed=3 saea     best=0.978308 time=0.43s
+236 griewank     d=10 seed=3 adaptive best=0.882175 time=0.40s
+237 griewank     d=10 seed=4 random   best=2.00911 time=0.00s
+238 griewank     d=10 seed=4 de       best=1.76702 time=0.00s
+239 griewank     d=10 seed=4 saea     best=1.01728 time=0.39s
+240 griewank     d=10 seed=4 adaptive best=1.02627 time=0.43s

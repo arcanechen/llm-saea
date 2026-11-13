@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.7,
+    "crossover": 0.9,
+    "exploration": 0.45,
+    "local_fraction": 0.35,
+    "radius": 0.15,
+    "population": 36,
+    "generations": 6,
+    "reason": "Stagnation with zero recent improvement signals the reference plan is too exploitative; increase exploration and mutation modestly to escape the flat basin while keeping current_to_best for stable convergence. Auto surrogate lets held-out RMSE pick between RBF and quadratic given the small 24-sample set in 5D. Population trimmed to 36 to preserve expensive budget for more generations, and local_fraction/radius kept moderate for a balanced global-local split."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/sphere_d5/llm/seed_4/result.json",
+    "independent_online_trial": false
+  }
+}

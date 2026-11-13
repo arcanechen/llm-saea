@@ -1,0 +1,33 @@
+{
+  "problem": "griewank",
+  "method": "random",
+  "seed": 2,
+  "best_y": 1.9674173937474402,
+  "best_x": [
+    -38.387728221704535,
+    24.10399849704315,
+    -16.2442174388828,
+    -13.980733606544213,
+    -4.321994576684041,
+    -3.72433488292225,
+    29.09351734930138,
+    -20.424948635465455,
+    -3.8534113425341943,
+    -6.686097420514095
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.002108599999701255,
+  "objective_seconds": 0.0011315000083413906,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "online_llm": false,
+    "objective_delay_injected": false
+  },
+  "events": []
+}

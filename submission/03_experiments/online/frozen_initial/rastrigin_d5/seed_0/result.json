@@ -1,0 +1,49 @@
+{
+  "problem": "rastrigin",
+  "method": "saea",
+  "seed": 0,
+  "best_y": 20.672401237678443,
+  "best_x": [
+    -0.9345789738107371,
+    -1.0390014493503985,
+    -1.2544181843851767,
+    -0.8929183642678895,
+    -0.8988633790356779
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.326888700001291,
+  "objective_seconds": 0.001462099993659649,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/rastrigin_d5/llm/seed_0/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.8,
+        "exploration": 0.45,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 36,
+        "generations": 6,
+        "reason": "With 24 of 100 evaluations and 20 stagnation but no recent improvement, the search needs mild diversification; auto picks between RBF and quadratic by held-out RMSE for a 5-D problem. current_to_best is stable and exploits the surrogate's predicted ranking effectively. Moderate exploration (0.45) and radius (0.15) balance novelty against predicted objective given the flat progress. local_fraction 0.25 keeps some local refinement with 36 population and 6 generations, staying within the fixed expensive budget."
+      },
+      "source": "saea"
+    }
+  ]
+}

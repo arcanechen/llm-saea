@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.8,
+    "crossover": 0.9,
+    "exploration": 0.5,
+    "local_fraction": 0.2,
+    "radius": 0.15,
+    "population": 30,
+    "generations": 6,
+    "reason": "Stagnation (19 evals) with zero recent improvement and 76 evals remaining calls for more exploration rather than a tighter local focus. auto lets held-out RMSE pick RBF vs quadratic in this 10-D space with few initial samples. current_to_best balances convergence and diversity; raising exploration to 0.5 and mutation to 0.8 helps escape the plateau, while a moderate population/generations ratio keeps surrogate scoring cheap given the fixed budget."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/rosenbrock_d10/llm/seed_1/result.json",
+    "independent_online_trial": false
+  }
+}

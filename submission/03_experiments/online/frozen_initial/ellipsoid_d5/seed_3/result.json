@@ -1,0 +1,49 @@
+{
+  "problem": "ellipsoid",
+  "method": "saea",
+  "seed": 3,
+  "best_y": 3809.6474008155233,
+  "best_x": [
+    1.8919891804464548,
+    -4.344584459534931,
+    -1.0683156786565382,
+    -0.24961845215086598,
+    -0.009873248923710776
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.2846633000008296,
+  "objective_seconds": 0.0025302000030933414,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/ellipsoid_d5/llm/seed_3/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.85,
+        "exploration": 0.5,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 6,
+        "reason": "Low dimension (5) and early budget use (24/100) with zero recent improvement and stagnation 5 favor balanced exploration over exploitation. Auto surrogate adapts between RBF and quadratic as data grows. current_to_best gives adaptive step sizing toward best for smoother convergence. Raising exploration to 0.5 adds novelty pressure in acquisition to escape the plateau, while moderate radius 0.15 and local_fraction 0.25 keep some local refinement without over-committing. Smaller population (30) and 6 generations per cycle leave room for more surrogate refits within the fixed budget."
+      },
+      "source": "saea"
+    }
+  ]
+}

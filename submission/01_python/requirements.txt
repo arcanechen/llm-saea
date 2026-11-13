@@ -1,0 +1,7 @@
+numpy>=1.24
+openai>=1.68
+python-dotenv>=1.0
+scipy>=1.10
+matplotlib>=3.7
+reportlab>=4
+pypdf>=4

@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.8,
+    "crossover": 0.7,
+    "exploration": 0.6,
+    "local_fraction": 0.25,
+    "radius": 0.2,
+    "population": 30,
+    "generations": 5,
+    "reason": "With 24/100 evaluations used and complete stagnation, the search needs more diversification: higher exploration and mutation mixed with current_to_best exploitation. Auto surrogate adapts model choice to small data. Moderate local_fraction and radius allow occasional focused refinement without overcommitting to a stale region."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/rosenbrock_d5/llm/seed_3/result.json",
+    "independent_online_trial": false
+  }
+}

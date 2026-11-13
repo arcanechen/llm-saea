@@ -1,0 +1,28 @@
+{
+  "problem": "ackley",
+  "method": "random",
+  "seed": 1,
+  "best_y": 4.828704397348009,
+  "best_x": [
+    -0.6377716776130393,
+    0.980284679987804,
+    -0.011569045801508082,
+    -0.8630425733803264,
+    1.8681297261599585
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.002338899999813293,
+  "objective_seconds": 0.0013561000105255516,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "online_llm": false,
+    "objective_delay_injected": false
+  },
+  "events": []
+}

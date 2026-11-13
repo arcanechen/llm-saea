@@ -1,0 +1,54 @@
+{
+  "problem": "rosenbrock",
+  "method": "saea",
+  "seed": 4,
+  "best_y": 98.31722822659373,
+  "best_x": [
+    0.6075920075477659,
+    0.10810821039325624,
+    -0.2056086928836507,
+    -0.028605004442425752,
+    -0.0019356762850328835,
+    0.5256577313076995,
+    0.7165478735504522,
+    0.9184786173332191,
+    1.0925111672197407,
+    1.5382396927552042
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.3977612000016961,
+  "objective_seconds": 0.0016438999809906818,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/rosenbrock_d10/llm/seed_4/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.85,
+        "exploration": 0.45,
+        "local_fraction": 0.4,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 8,
+        "reason": "With only 24 of 100 evaluations used at dimension 10, the surrogate is still data-poor, so 'auto' lets held-out RMSE choose between RBF and quadratic. Stagnation (9) and zero recent improvement favor more exploration and a slightly larger novelty weight (0.45) to escape a flat region, while keeping current_to_best for moderate exploitation. Population 30 and generations 8 give a reasonable candidate pool without overspending the fixed budget; local_fraction 0.4 and radius 0.15 balance local refinement against global coverage."
+      },
+      "source": "saea"
+    }
+  ]
+}

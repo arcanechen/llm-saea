@@ -1,0 +1,54 @@
+{
+  "problem": "ellipsoid",
+  "method": "saea",
+  "seed": 4,
+  "best_y": 24867.6675537071,
+  "best_x": [
+    -1.7560247912382199,
+    4.533452606868311,
+    -4.765799414663563,
+    -4.4988628314304835,
+    1.1133945839959667,
+    1.869858706952896,
+    -1.0234086780555773,
+    0.2617643771437228,
+    -0.047741728060426425,
+    0.0016216572649243588
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.3683211999996274,
+  "objective_seconds": 0.0023628999988432042,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/ellipsoid_d10/llm/seed_4/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.8,
+        "exploration": 0.5,
+        "local_fraction": 0.35,
+        "radius": 0.15,
+        "population": 36,
+        "generations": 6,
+        "reason": "With only 24/100 evaluations consumed in 10D, surrogate data is sparse, so auto selection and moderate exploration (raised to 0.5) hedge model error via distance novelty. current_to_best balances convergence and spread; stagnation at 10 makes modest exploration/local refinement worthwhile. Population 36 and 6 generations keep surrogate fit cheap enough on a fixed budget, while radius 0.15 enables localized trust-region refinement without over-exploiting."
+      },
+      "source": "saea"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "status": "FULL_ONLINE_BENCHMARK_COMPLETED",
+  "date_local": "2026-10-23",
+  "timezone": "Asia/Shanghai",
+  "active_provider": "deepseek",
+  "api_model": "deepseek-flash",
+  "openai_service_status": "Not live-tested",
+  "main_analysis_runs": 300,
+  "baseline_runs_reused": 240,
+  "new_online_runs": 60,
+  "main_analysis_objective_evaluations": 30000,
+  "benchmark_api_requests": 240,
+  "benchmark_failed_requests": 0,
+  "benchmark_tokens": 239318,
+  "prior_smoke_api_requests": 1,
+  "prior_smoke_tokens": 866,
+  "online_model_requests_sent_by_experiment_code": 241,
+  "total_tokens_including_prior_smoke": 240184,
+  "local_frozen_ablation_runs": 60,
+  "exact_replay_verified_runs": 60,
+  "authorization": "User requested continuing online experiments and producing the final submission.",
+  "evidence": [
+    "online/manifest.json",
+    "online/online_audit.json",
+    "online/api_calls.csv",
+    "online/report_findings.json"
+  ],
+  "result": "在线 LLM 在 2/12 个实例上的最终中位数优于固定 SAEA，在 3/12 个实例上优于规则 SAEA。五方法平均名次为 random=4.50；de=4.50；saea=1.83；adaptive=1.58；llm=2.58。在线 LLM 对两个 SAEA 对照的 Holm 校正显著项分别为 0 和 0。这是一组小样本基准证据，不支持声称 LLM 对任意问题普遍更优。",
+  "limitations": [
+    "Exploratory n=5 per instance",
+    "Analytic benchmarks, no real industrial simulation",
+    "Finite bounded deterministic scalar continuous objectives",
+    "Model alias may change; event replay preserves local trajectories"
+  ]
+}

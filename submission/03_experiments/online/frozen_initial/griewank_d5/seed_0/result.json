@@ -1,0 +1,49 @@
+{
+  "problem": "griewank",
+  "method": "saea",
+  "seed": 0,
+  "best_y": 0.42965096262668545,
+  "best_x": [
+    -9.431465482430681,
+    8.98292933461817,
+    0.5883531120247056,
+    13.069413393876516,
+    22.28968327280313
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.27557549999983166,
+  "objective_seconds": 0.0015802999878360424,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/griewank_d5/llm/seed_0/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.55,
+        "crossover": 0.8,
+        "exploration": 0.45,
+        "local_fraction": 0.35,
+        "radius": 0.12,
+        "population": 30,
+        "generations": 6,
+        "reason": "Only 24/100 evaluations used but stagnation is high (20) with zero recent improvement, indicating the current reference design is exploiting too narrowly. Auto surrogate lets held-out RMSE pick RBF vs quadratic for a 5D problem with limited data. Keep current_to_best (good balance of convergence and diversity), but modestly lower mutation/crossover toward robust exploration and raise exploration to 0.45 so the novelty-distance term pushes candidates away from repeatedly sampled regions; local fraction stays moderate (0.35) to retain local refinement within the 0.12 normalized radius. Population 30 with 6 generations balances surrogate retraining cost under the fixed budget without requesting extra true evaluations."
+      },
+      "source": "saea"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "problem": "ellipsoid",
+  "method": "saea",
+  "seed": 1,
+  "best_y": 50430.88375537772,
+  "best_x": [
+    2.2177042717466957,
+    -3.637260732422163,
+    -2.5786084197020065,
+    3.29222819648756,
+    1.0344569459083282,
+    0.7733808303123073,
+    0.7764319732765692,
+    0.1028467731424918,
+    0.021333384597329363,
+    -0.20182826049190972
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.26372099999935017,
+  "objective_seconds": 0.00229260001287912,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/ellipsoid_d10/llm/seed_1/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.55,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 5,
+        "reason": "Stagnation at 19 evals with zero recent improvement and only 24/100 budget spent indicates premature convergence; auto surrogate adapts kernel choice to held-out RMSE, current_to_best gives balanced convergence, and a moderately higher exploration with novelty distance pushes diversity. Population/generations kept moderate to respect the limited remaining budget."
+      },
+      "source": "saea"
+    }
+  ]
+}

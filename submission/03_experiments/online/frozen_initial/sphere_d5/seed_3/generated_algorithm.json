@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.8,
+    "crossover": 0.9,
+    "exploration": 0.6,
+    "local_fraction": 0.35,
+    "radius": 0.15,
+    "population": 30,
+    "generations": 5,
+    "reason": "With 24/100 evaluations used and no recent improvement (stagnation 23), overly greedy exploitation risks sticking in a poor basin. Auto surrogate lets held-out RMSE choose between RBF and quadratic, hedging against an unknown 5-D landscape. Raising exploration to 0.6 and mutation to 0.8 diversifies via the novelty term while current_to_best keeps a directed step toward the incumbent; moderate local_fraction and radius balance local refinement with exploration. Smaller population/generations per cycle preserves the fixed budget for more adaptive surrogate rebuilds."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/sphere_d5/llm/seed_3/result.json",
+    "independent_online_trial": false
+  }
+}

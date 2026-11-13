@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.6,
+    "crossover": 0.8,
+    "exploration": 0.45,
+    "local_fraction": 0.35,
+    "radius": 0.15,
+    "population": 30,
+    "generations": 5,
+    "reason": "At 10D with only 24/100 evals used and no recent improvement, the surrogate is still data-starved, so auto selection lets held-out RMSE choose between RBF and quadratic instead of committing prematurely. Stagnation and zero recent improvement favor more exploration and a modestly larger radius to escape a local basin, while keeping a local fraction so the current_to_best operator still refines promising regions once the surrogate sharpens. Population/generations are kept moderate to avoid over-consuming the remaining budget per surrogate update."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/sphere_d10/llm/seed_4/result.json",
+    "independent_online_trial": false
+  }
+}

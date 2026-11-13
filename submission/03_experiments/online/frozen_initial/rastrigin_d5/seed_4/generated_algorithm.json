@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.7,
+    "crossover": 0.9,
+    "exploration": 0.35,
+    "local_fraction": 0.4,
+    "radius": 0.15,
+    "population": 30,
+    "generations": 5,
+    "reason": "At 24/100 evaluations in 5D with 9 stagnant steps and no recent gain, I raise exploration and local_fraction to escape a flat basin, shrink population/generations to conserve the fixed budget, and keep auto surrogate with current_to_best to balance convergence and diversity; radius widened modestly since novelty heuristic may underestimate uncertainty mid-budget."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/rastrigin_d5/llm/seed_4/result.json",
+    "independent_online_trial": false
+  }
+}

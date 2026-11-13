@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.6,
+    "crossover": 0.85,
+    "exploration": 0.45,
+    "local_fraction": 0.45,
+    "radius": 0.18,
+    "population": 32,
+    "generations": 5,
+    "reason": "With only 24 of 100 evaluations and 3 stagnation steps with zero recent improvement, the reference design is likely too exploitative and too costly per generation. Increasing exploration and local_fraction broadens acquisition and injects diversity to escape the plateau, while a larger radius and moderate population/generations balance surrogate-guided search against the remaining budget. Auto surrogate selection adapts between RBF and quadratic given scarce, dimension-5 data; current_to_best keeps bias toward promising regions without overcommitting."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/ellipsoid_d5/llm/seed_0/result.json",
+    "independent_online_trial": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "problem": "ackley",
+  "method": "saea",
+  "seed": 3,
+  "best_y": 2.274458646191001,
+  "best_x": [
+    -0.48166975195621387,
+    -0.036413450179299645,
+    -0.1507972197300056,
+    0.21782756595464292,
+    -0.050235733082233835
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.366303800001333,
+  "objective_seconds": 0.002613499978906475,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/ackley_d5/llm/seed_3/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.6,
+        "local_fraction": 0.4,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 8,
+        "reason": "High stagnation (23) with zero recent improvement means the current plan over-exploits; raising exploration to 0.6 and local_fraction to 0.4 pushes novelty-driven sampling in under-covered regions while radius 0.15 keeps local refinement feasible in 5D. auto surrogate adapts between RBF and quadratic given sparse 24-point data; current_to_best with strong crossover (0.9) balances convergence and diversity without extra true evaluations. Population 30 and 8 generations fit the remaining ~76 evaluation budget with surrogate screening."
+      },
+      "source": "saea"
+    }
+  ]
+}

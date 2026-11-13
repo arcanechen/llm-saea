@@ -1,0 +1,54 @@
+{
+  "problem": "ackley",
+  "method": "saea",
+  "seed": 4,
+  "best_y": 3.6371858950422156,
+  "best_x": [
+    0.3478377300810571,
+    0.6563797515542227,
+    -0.09060297927348859,
+    0.6151187437501981,
+    0.16689450490951696,
+    -0.17802202462643812,
+    0.40858554480018583,
+    -0.9282524120058113,
+    0.426484549184865,
+    -0.2646817520845799
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.2657957000010356,
+  "objective_seconds": 0.0021049000170023646,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/ackley_d10/llm/seed_4/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.85,
+        "exploration": 0.35,
+        "local_fraction": 0.35,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 5,
+        "reason": "With only 24 of 100 evaluations used in a 10-D problem and 6 stagnated steps with zero recent improvement, boosting exploration and local search helps escape the plateau. Auto surrogate adapts via held-out RMSE among RBF/quadratic. current_to_best balances convergence toward the surrogate optimum with diversity; moderate mutation and high crossover maintain sampling. A modest population/generation count limits surrogate overhead so more of the fixed budget goes to true evaluations, while exploration 0.35 and radius 0.15 balance novelty-driven exploration against exploitation."
+      },
+      "source": "saea"
+    }
+  ]
+}

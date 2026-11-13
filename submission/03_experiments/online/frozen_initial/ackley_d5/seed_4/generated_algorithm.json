@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.55,
+    "crossover": 0.8,
+    "exploration": 0.45,
+    "local_fraction": 0.35,
+    "radius": 0.18,
+    "population": 36,
+    "generations": 6,
+    "reason": "With only 24 of 100 evaluations used and 9 stagnant steps, increase exploration and radius to escape the stalled basin while keeping exploitation from current_to_best. Auto surrogate adapts between RBF and quadratic as data grows; moderate population and generations fit the remaining budget without extra true evaluations. Lower mutation slightly to stabilize convergence once novelty-driven candidates are screened."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/ackley_d5/llm/seed_4/result.json",
+    "independent_online_trial": false
+  }
+}

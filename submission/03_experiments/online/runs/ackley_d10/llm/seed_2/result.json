@@ -1,0 +1,100 @@
+{
+  "problem": "ackley",
+  "method": "llm",
+  "seed": 2,
+  "best_y": 3.7262144683146485,
+  "best_x": [
+    -1.0612661761802453,
+    0.22561057756997904,
+    1.1209377265549039,
+    0.02001275372710687,
+    -0.19955488138607969,
+    0.5390109987296405,
+    -0.6829373723591008,
+    -1.0071169125360715,
+    -0.0080853000634864,
+    0.24926757823518564
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 8.541729000000487,
+  "objective_seconds": 0.002502799979993142,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 4,
+    "llm_provider": "deepseek",
+    "llm_model": "deepseek-flash",
+    "online_llm": true,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.55,
+        "crossover": 0.85,
+        "exploration": 0.45,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 5,
+        "reason": "10-D with 24/100 evaluations spent and clear stagnation (18, zero recent improvement). Auto-surrogate hedges between RBF and quadratic as samples accumulate. current_to_best with modest mutation balances local refinement and drift from the incumbent. Raising exploration to 0.45 and radius to 0.15 injects novelty to escape the stalled region without abandoning local search (local_fraction 0.25). Population 30 x 5 generations gives cheap surrogate-driven selection each cycle, conserving the fixed true-evaluation budget."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 44,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "best1",
+        "mutation": 0.7,
+        "crossover": 0.8,
+        "exploration": 0.6,
+        "local_fraction": 0.35,
+        "radius": 0.2,
+        "population": 40,
+        "generations": 6,
+        "reason": "10-D problem at 44/100 evaluations with 7-step stagnation but strong recent relative improvement (0.36), so the stall is partial rather than terminal. CV normalized RMSE is high (0.75), indicating the proxy is still loose; auto-surrogate hedges between RBF and quadratic rather than committing to an overfit quadratic. Raising exploration to 0.6 and radius to 0.2 keeps novelty pressure to escape the stalled basin while a moderate local_fraction (0.35) preserves refinement. best1 pushes toward the incumbent to exploit the strong recent gains, with slightly higher mutation (0.7) for diversity and population 40 x 6 generations for cheap surrogate-driven selection that respects the fixed true-evaluation budget."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 64,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.85,
+        "crossover": 0.9,
+        "exploration": 0.9,
+        "local_fraction": 0.25,
+        "radius": 0.25,
+        "population": 36,
+        "generations": 5,
+        "reason": "At 64/100 evaluations with 11-step stagnation and zero recent improvement, the search is stuck despite a moderate surrogate fit (CV normalized RMSE 0.53). Switching from best1 to current_to_best balances per-individual refinement with attraction to the incumbent, reducing premature collapse onto a single basin. Higher exploration (0.9) and radius (0.25) inject novelty pressure to escape the stalled region, while a lower local_fraction (0.25) limits over-intensive local sampling with a loose proxy. Mutation 0.85 and crossover 0.9 maintain diversity in 10-D. Auto-surrogate hedges between RBF and quadratic; population 36 x 5 generations keeps surrogate cost low so remaining true-evaluation budget is spent on promising candidates."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 84,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.9,
+        "crossover": 0.9,
+        "exploration": 1.1,
+        "local_fraction": 0.35,
+        "radius": 0.18,
+        "population": 26,
+        "generations": 4,
+        "reason": "Only 16 true evaluations remain and the run has stagnated 31 steps with zero recent improvement, so most budget should favor exploration over proxy-intensive exploitation. The CV normalized RMSE of 0.56 is weak, so I keep auto surrogate as a hedge and reduce local_fraction/radius to avoid over-trusting a poor local proxy while still allowing some focused sampling. Raising exploration to 1.1 and keeping high mutation (0.9) with current_to_best pushes novelty in 10-D without fully collapsing to best1. A smaller population (26) and fewer generations (4) preserve true-evaluation budget for the final phase."
+      },
+      "source": "deepseek"
+    }
+  ]
+}

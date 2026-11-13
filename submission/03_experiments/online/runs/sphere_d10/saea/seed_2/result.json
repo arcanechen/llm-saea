@@ -1,0 +1,50 @@
+{
+  "problem": "sphere",
+  "method": "saea",
+  "seed": 2,
+  "best_y": 1.2504287407685726,
+  "best_x": [
+    -0.5433896732458798,
+    -0.07949086708017106,
+    0.04631232893240611,
+    -0.24306745050253475,
+    -0.169546835628001,
+    0.5539644652600444,
+    0.20930921820700465,
+    0.4155164052591429,
+    0.565730455468973,
+    -0.12439071577433314
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.3947325999997702,
+  "objective_seconds": 0.0010150000052817632,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "online_llm": false,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.65,
+        "crossover": 0.85,
+        "exploration": 0.2,
+        "local_fraction": 0.3,
+        "radius": 0.12,
+        "population": 40,
+        "generations": 6,
+        "reason": "Fixed reference design."
+      },
+      "source": "saea"
+    }
+  ]
+}

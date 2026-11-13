@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.7,
+    "crossover": 0.9,
+    "exploration": 0.45,
+    "local_fraction": 0.35,
+    "radius": 0.15,
+    "population": 30,
+    "generations": 7,
+    "reason": "With only 24 of 100 evaluations used in 10-D, auto surrogate hedges between RBF and quadratic as data grows. Stagnation of 12 and zero recent improvement calls for more exploration (0.45) and a slightly larger local radius/step to escape flat regions, while current_to_best with moderate mutation preserves convergence. Population 30 keeps surrogate training cheap so generations can refresh the model more often; local_fraction 0.35 balances global and local sampling."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/sphere_d10/llm/seed_2/result.json",
+    "independent_online_trial": false
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "problem": "sphere",
+  "method": "saea",
+  "seed": 4,
+  "best_y": 1.2663517349589537,
+  "best_x": [
+    -0.30826056986638406,
+    -0.4393892847197769,
+    0.32009567044735654,
+    0.16578279742597068,
+    0.058171769575388055,
+    -0.7233543083342076,
+    -0.07600729351066704,
+    -0.5395386016418868,
+    -0.14004792052775716,
+    -0.07211932336541693
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.2807257999993453,
+  "objective_seconds": 0.001167100006568944,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/sphere_d10/llm/seed_4/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.8,
+        "exploration": 0.45,
+        "local_fraction": 0.35,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 5,
+        "reason": "At 10D with only 24/100 evals used and no recent improvement, the surrogate is still data-starved, so auto selection lets held-out RMSE choose between RBF and quadratic instead of committing prematurely. Stagnation and zero recent improvement favor more exploration and a modestly larger radius to escape a local basin, while keeping a local fraction so the current_to_best operator still refines promising regions once the surrogate sharpens. Population/generations are kept moderate to avoid over-consuming the remaining budget per surrogate update."
+      },
+      "source": "saea"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "problem": "rosenbrock",
+  "method": "llm",
+  "seed": 2,
+  "best_y": 167.7347486485191,
+  "best_x": [
+    0.6361322654861716,
+    0.269069203998344,
+    0.48370991370712124,
+    -0.5695714772694473,
+    0.07738487555067586,
+    0.3571901865414926,
+    0.7941338695693001,
+    0.8347919245595974,
+    0.6503297022558847,
+    0.773744448082248
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 8.061929900002724,
+  "objective_seconds": 0.0017880000195873436,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 4,
+    "llm_provider": "deepseek",
+    "llm_model": "deepseek-flash",
+    "online_llm": true,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.85,
+        "exploration": 0.45,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 5,
+        "reason": "With 24 of 100 evaluations and 12 stagnated steps, increase exploration to escape the plateau while keeping current_to_best for balanced convergence. Auto surrogate adapts between RBF/quadratic as data accumulates in 10-D. Moderate population/generations keep surrogate fitting cheap per cycle; small local_fraction with radius 0.15 adds focused local search without over-exploiting a weak surrogate."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 44,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.8,
+        "exploration": 0.6,
+        "local_fraction": 0.3,
+        "radius": 0.2,
+        "population": 36,
+        "generations": 6,
+        "reason": "Mid-run with 44/100 evaluations, mild stagnation (7) but decent recent improvement (0.05) and high CV error (1.34) indicating surrogate uncertainty in 10-D. Raise exploration to 0.6 and radius to 0.2 to probe beyond the plateau, keeping current_to_best for stable convergence. Auto surrogate adapts between RBF and quadratic as data grows; modest local_fraction 0.3 balances local refinement. Population 36 and 6 generations fit cheaply per cycle without extra true evaluations."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 64,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.75,
+        "exploration": 0.85,
+        "local_fraction": 0.25,
+        "radius": 0.25,
+        "population": 32,
+        "generations": 5,
+        "reason": "Stagnation at 27 with zero recent improvement and high CV error (1.27) signals the surrogate is unreliable in 10-D and the search is plateaued. Auto surrogate lets RBF/quadratic be chosen by held-out RMSE as more points accumulate. Increase exploration to 0.85 and radius to 0.25 to reward novelty and escape the plateau, while trimming local_fraction to 0.25 so more budget goes to diverse global proposals. current_to_best keeps stable directional convergence with slightly higher mutation 0.7 for diversity. Smaller population 32 and 5 generations keep per-cycle cost low since only 36 evaluations remain."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 84,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "rand1",
+        "mutation": 0.9,
+        "crossover": 0.8,
+        "exploration": 1.2,
+        "local_fraction": 0.15,
+        "radius": 0.3,
+        "population": 24,
+        "generations": 4,
+        "reason": "With only 16 true evaluations left and severe stagnation (47) with zero recent improvement, the surrogate is unreliable (CV RMSE 0.74) in 10-D, so exploitation is risky. Auto surrogate adaptively picks RBF/quadratic by held-out RMSE. Switching to rand1 maximizes diversity and avoids premature convergence to a stale best; high exploration 1.2 and radius 0.3 favor novelty to probe unexplored regions, while low local_fraction 0.15 keeps sampling global. Modest mutation 0.9 and crossover 0.8 balance spread vs. stability. Small population 24 and 4 generations keep surrogate fitting cheap per cycle within the tight remaining budget."
+      },
+      "source": "deepseek"
+    }
+  ]
+}

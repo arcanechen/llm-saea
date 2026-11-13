@@ -1,0 +1,54 @@
+{
+  "problem": "griewank",
+  "method": "saea",
+  "seed": 3,
+  "best_y": 1.0721629994652453,
+  "best_x": [
+    10.039666587123975,
+    -1.0256924640246297,
+    4.6271784091781,
+    -4.5859728296673055,
+    -1.0561794543373821,
+    -1.6788065308501956,
+    -3.6718378691870015,
+    7.585797942574381,
+    -6.399159463491863,
+    4.752176655249762
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.2737240999995265,
+  "objective_seconds": 0.001631199997063959,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/griewank_d10/llm/seed_3/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.35,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 5,
+        "reason": "24 of 100 evaluations done, so data is scarce and a sample-size-dependent choice is best; auto lets held-out RMSE pick RBF vs quadratic while rbf length-scale selection adds flexibility. Stagnation of 10 with zero recent improvement suggests we should avoid over-exploiting a poorly fit surrogate: raise exploration modestly and keep a moderate local_fraction so some search stays near the incumbent but not too concentrated. current_to_best DE balances exploitation of the best with directional diversity and is robust in 10D. Moderate mutation/crossover maintain diversity; population 30 and 5 generations keep surrogate refits cheap within the fixed budget. Radius 0.15 in normalized coordinates is a reasonable novelty scale for local sampling. No extra evaluations requested."
+      },
+      "source": "saea"
+    }
+  ]
+}

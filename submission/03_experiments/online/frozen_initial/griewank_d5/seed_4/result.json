@@ -1,0 +1,49 @@
+{
+  "problem": "griewank",
+  "method": "saea",
+  "seed": 4,
+  "best_y": 0.41760834382307643,
+  "best_x": [
+    -0.845173797815221,
+    -0.4858550088570155,
+    0.2896211714155328,
+    6.377569640975402,
+    7.405429660058161
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.41414589999840246,
+  "objective_seconds": 0.0017972000205190852,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/griewank_d5/llm/seed_4/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.5,
+        "crossover": 0.7,
+        "exploration": 0.45,
+        "local_fraction": 0.4,
+        "radius": 0.18,
+        "population": 32,
+        "generations": 8,
+        "reason": "Budget 100 with only 24 evaluations and stagnation 9 suggests over-exploitation, so raise exploration to 0.45 and radius to 0.18 for broader surrogate-guided sampling. Auto surrogate adapts via held-out RMSE between RBF and quadratic given sparse 5-D data. current_to_best balances stable convergence with directional drift; mutation 0.5 and crossover 0.7 are moderate for reliable surrogate pre-screening. Population 32 keeps selection pressure per generation while generations 8 fit the remaining budget; local_fraction 0.4 splits effort between local refinement and global exploration."
+      },
+      "source": "saea"
+    }
+  ]
+}

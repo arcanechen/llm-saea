@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.6,
+    "crossover": 0.8,
+    "exploration": 0.45,
+    "local_fraction": 0.25,
+    "radius": 0.15,
+    "population": 36,
+    "generations": 6,
+    "reason": "With 24 of 100 evaluations and 20 stagnation but no recent improvement, the search needs mild diversification; auto picks between RBF and quadratic by held-out RMSE for a 5-D problem. current_to_best is stable and exploits the surrogate's predicted ranking effectively. Moderate exploration (0.45) and radius (0.15) balance novelty against predicted objective given the flat progress. local_fraction 0.25 keeps some local refinement with 36 population and 6 generations, staying within the fixed expensive budget."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/rastrigin_d5/llm/seed_0/result.json",
+    "independent_online_trial": false
+  }
+}

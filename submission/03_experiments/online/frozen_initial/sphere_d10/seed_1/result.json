@@ -1,0 +1,54 @@
+{
+  "problem": "sphere",
+  "method": "saea",
+  "seed": 1,
+  "best_y": 1.1469685903196787,
+  "best_x": [
+    -0.19978375849953967,
+    0.3748619763587948,
+    -0.5562218966929544,
+    -0.4500699033905109,
+    0.15192106336273437,
+    0.12331978398505772,
+    -0.35161684789863656,
+    -0.29277135907996055,
+    -0.3076912773968772,
+    0.33507707369498707
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.4253132999983791,
+  "objective_seconds": 0.0012172000169812236,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/sphere_d10/llm/seed_1/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.8,
+        "exploration": 0.65,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 8,
+        "reason": "Stagnation near 19 with zero recent improvement and only 24/100 evals used suggests the current design is too exploitative. Raise exploration to 0.65 to push novelty in 10-D, keep current_to_best for guided convergence, reduce population to 30 to allow more generations per surrogate refit under the fixed budget. Auto surrogate hedges between RBF and quadratic given CV RMSE is unavailable. Moderate radius and lower local_fraction preserve global sampling since local refinement has stalled."
+      },
+      "source": "saea"
+    }
+  ]
+}

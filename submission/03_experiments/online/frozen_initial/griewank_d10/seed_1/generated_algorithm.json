@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.8,
+    "crossover": 0.9,
+    "exploration": 0.6,
+    "local_fraction": 0.4,
+    "radius": 0.2,
+    "population": 30,
+    "generations": 8,
+    "reason": "High-dim (10-D) with severe stagnation and no recent improvement, so shift toward exploration: raise exploration weight and mutation, widen radius, and use current_to_best for directed but still diverse search. Smaller population with more generations suits a tight 100-eval budget (24 used). Auto surrogate adapts RBF vs quadratic by held-out RMSE to avoid committing to a poor model early."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/griewank_d10/llm/seed_1/result.json",
+    "independent_online_trial": false
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "problem": "ellipsoid",
+  "method": "llm",
+  "seed": 4,
+  "best_y": 2343.2185438222787,
+  "best_x": [
+    -0.8355376618007329,
+    0.7061874901726162,
+    -0.40632554321646097,
+    0.1036153166906173,
+    -0.042686570582453065
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 6.208742400001938,
+  "objective_seconds": 0.00275560000227415,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 4,
+    "llm_provider": "deepseek",
+    "llm_model": "deepseek-flash",
+    "online_llm": true,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.8,
+        "exploration": 0.45,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 5,
+        "reason": "Early stage with 24/100 evaluations and stagnation of 18 with zero recent improvement, so increase exploration to escape a flat region while keeping exploitation via current_to_best. Auto surrogate adapts between RBF and quadratic as data grows; modest population/generations limit surrogate cost against the remaining budget. Local_fraction and radius are kept moderate to balance refinement and coverage."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 44,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.85,
+        "exploration": 0.75,
+        "local_fraction": 0.3,
+        "radius": 0.2,
+        "population": 32,
+        "generations": 6,
+        "reason": "Only 44/100 evaluations used with 8-step stagnation and tiny recent improvement (0.00086), suggesting a flat/near-converged region. Auto surrogate adapts between RBF and quadratic; current_to_best preserves exploitation while raising exploration to 0.75 and radius to 0.2 to re-open coverage and escape the flat basin. Moderate population/generations limit surrogate overhead against the remaining budget."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 64,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.9,
+        "exploration": 1.1,
+        "local_fraction": 0.25,
+        "radius": 0.25,
+        "population": 28,
+        "generations": 5,
+        "reason": "Stagnation is high (28) with zero recent improvement and the surrogate's held-out CV error is essentially zero, so the model is confident but the search has stalled in a flat basin. Raising exploration to 1.1 and widening radius to 0.25 leverages the novelty-distance term to reopen coverage without extra true evaluations. Reducing population/generations to 28/5 preserves budget for more surrogate-guided generations, while auto keeps the adaptive RBF/quadratic choice. current_to_best balances exploitation of the confident model with mutation 0.6 for diversity."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 84,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "best1",
+        "mutation": 0.9,
+        "crossover": 0.7,
+        "exploration": 1.4,
+        "local_fraction": 0.15,
+        "radius": 0.35,
+        "population": 24,
+        "generations": 4,
+        "reason": "Stagnation=9 with tiny recent improvement (4.5e-4) and near-zero CV error indicates a confident surrogate stuck in a flat basin. Shift to best1 with higher exploration (1.4) and wider radius (0.35) to exploit the reliable model while the novelty term reopens coverage. Lower local_fraction (0.15) prioritizes global diversification; smaller population/generations (24/4) preserve budget for more surrogate-guided cycles. auto keeps adaptive RBF/quadratic selection; mutation 0.9 and crossover 0.7 add diversity without destabilizing."
+      },
+      "source": "deepseek"
+    }
+  ]
+}

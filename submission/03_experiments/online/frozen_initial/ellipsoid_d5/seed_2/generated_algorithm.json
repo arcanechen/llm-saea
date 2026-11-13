@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.5,
+    "crossover": 0.9,
+    "exploration": 0.5,
+    "local_fraction": 0.5,
+    "radius": 0.2,
+    "population": 30,
+    "generations": 8,
+    "reason": "Stagnation with zero recent improvement after 24 of 100 evaluations suggests the current exploitation is too narrow and stuck. I lower mutation and raise crossover for stable current_to_best convergence, increase exploration to 0.5 and radius to 0.2 to force broader surrogate-neighborhood sampling, and raise local_fraction to 0.5 for local refinement once a promising basin is found. Auto surrogate lets held-out RMSE choose between RBF and quadratic for this 5-D problem with limited data. Population/generations kept moderate to preserve true-evaluation budget."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/ellipsoid_d5/llm/seed_2/result.json",
+    "independent_online_trial": false
+  }
+}

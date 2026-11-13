@@ -1,0 +1,49 @@
+{
+  "problem": "sphere",
+  "method": "saea",
+  "seed": 0,
+  "best_y": 0.06995075693829363,
+  "best_x": [
+    0.0803219617198172,
+    -0.15692942246040342,
+    0.12299631062684213,
+    0.15291748381206283,
+    -0.01898542827515204
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.2449668000008387,
+  "objective_seconds": 0.0011706000077538192,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/sphere_d5/llm/seed_0/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.8,
+        "exploration": 0.35,
+        "local_fraction": 0.3,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 5,
+        "reason": "5-D with only 24 of 100 evaluations used and complete stagnation (no recent improvement), so the surrogate must be sampled more broadly rather than exploited. Auto surrogate lets held-out RMSE choose between RBF and quadratic as data accumulate; current_to_best balances guided convergence with diversity. Slightly higher exploration (0.35) and radius (0.15) counter stagnation by rewarding novel regions, while a moderate population of 30 and 5 generations keeps surrogate cost manageable within the fixed true-evaluation budget. Crossover 0.8 and mutation 0.6 are standard robust settings."
+      },
+      "source": "saea"
+    }
+  ]
+}

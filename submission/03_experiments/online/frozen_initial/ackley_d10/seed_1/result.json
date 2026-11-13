@@ -1,0 +1,54 @@
+{
+  "problem": "ackley",
+  "method": "saea",
+  "seed": 1,
+  "best_y": 3.3880324967350153,
+  "best_x": [
+    0.34091049457558675,
+    0.3541804339840109,
+    -0.0032115889386972185,
+    0.3992808957736047,
+    0.38123550260672445,
+    -0.20290862418825828,
+    0.8272277079732246,
+    -0.2425035091876202,
+    0.41373837625181586,
+    -0.2351222098222019
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.380480499999976,
+  "objective_seconds": 0.0020141999921179377,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/ackley_d10/llm/seed_1/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.8,
+        "crossover": 0.9,
+        "exploration": 0.55,
+        "local_fraction": 0.5,
+        "radius": 0.2,
+        "population": 30,
+        "generations": 8,
+        "reason": "High-dimensional (10D) problem with severe stagnation (19) and no recent improvement, so the optimizer needs more exploration and local refinement to escape a flat/uninformative region. Increasing exploration (0.55) and local_fraction (0.5) with a larger radius (0.2) balances novelty-based sampling against predicted-objective exploitation, since distance is only a novelty heuristic, not posterior uncertainty. Auto surrogate lets held-out RMSE pick RBF vs quadratic given few (24) evaluations. current_to_best with higher mutation/crossover keeps population diversity while guiding toward the incumbent, and a moderate population/generations ratio fits the remaining ~76-evaluation budget without over-allocating per generation."
+      },
+      "source": "saea"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "problem": "griewank",
+  "method": "saea",
+  "seed": 3,
+  "best_y": 0.4936995269117792,
+  "best_x": [
+    2.59499823683376,
+    -4.280417358582646,
+    -9.509169975433807,
+    -0.7874964780191647,
+    -0.5150242433146843
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.27953440000055707,
+  "objective_seconds": 0.001595400015503401,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/griewank_d5/llm/seed_3/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.45,
+        "local_fraction": 0.35,
+        "radius": 0.12,
+        "population": 36,
+        "generations": 5,
+        "reason": "With only 24/100 evaluations used and heavy stagnation (23), the current plan is over-exploiting too early. Auto surrogate lets held-out RMSE pick RBF vs quadratic as data accumulates; slight exploration increase (0.2->0.45) encourages novelty in the 5-D space while keeping local refinement modest. current_to_best retains convergence pressure; small population and generations keep surrogate cost low within the fixed budget."
+      },
+      "source": "saea"
+    }
+  ]
+}

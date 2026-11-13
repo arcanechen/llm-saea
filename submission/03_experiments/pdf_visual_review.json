@@ -1,0 +1,16 @@
+{
+  "status": "PASSED",
+  "reviewed_utc": "2026-10-23T06:07:27.518103+00:00",
+  "method": "Poppler 85 dpi rendering; all 17 pages inspected in contact sheets; result tables, ablation, costs and flowchart also inspected at page size.",
+  "findings": "No clipping, overlap, missing glyphs, blank pages or broken tables observed.",
+  "pages": {
+    "02_documents/algorithm_flow.pdf": 1,
+    "02_documents/算法说明文档.pdf": 7,
+    "03_experiments/实验结果报告.pdf": 9
+  },
+  "sha256": {
+    "02_documents/algorithm_flow.pdf": "2ecd68e8c0e3e57c481949fbfb6e4feefc11190085b527d5cfc6ffc7d119e934",
+    "02_documents/算法说明文档.pdf": "627f2a3c832c510b88320faf5b843d62e964ec5fcad53ea989aca0be737eec05",
+    "03_experiments/实验结果报告.pdf": "ee38bfe729096a3e8fb1f5516266be9d677e923c4e34b114a87f282d4b1dc7e7"
+  }
+}

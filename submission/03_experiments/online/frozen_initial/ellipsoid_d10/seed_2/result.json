@@ -1,0 +1,54 @@
+{
+  "problem": "ellipsoid",
+  "method": "saea",
+  "seed": 2,
+  "best_y": 38076.782396898874,
+  "best_x": [
+    3.7428303513900936,
+    2.7331060758678616,
+    0.504476799872629,
+    -4.292393085333428,
+    2.2829428039735555,
+    1.7226296278246078,
+    0.5623745538095015,
+    0.17290862011665453,
+    -0.03480347959410146,
+    -0.15018830528866545
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.2714525999981561,
+  "objective_seconds": 0.002305600013642106,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/ellipsoid_d10/llm/seed_2/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.5,
+        "crossover": 0.8,
+        "exploration": 0.5,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 5,
+        "reason": "With only 24/100 evaluations at dimension 10, the surrogate is still data-poor, so auto selection lets held-out RMSE pick RBF vs quadratic; current_to_best balances convergence near the incumbent. Stagnation (16) with zero recent improvement argues for higher exploration to escape flat/premature regions and a modest radius for local refinement. Smaller population/generations (30/5) preserves expensive budget for more surrogate updates, with moderate local_fraction to alternate global novelty and local exploitation."
+      },
+      "source": "saea"
+    }
+  ]
+}

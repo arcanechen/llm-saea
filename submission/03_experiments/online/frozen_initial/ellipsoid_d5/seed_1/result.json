@@ -1,0 +1,49 @@
+{
+  "problem": "ellipsoid",
+  "method": "saea",
+  "seed": 1,
+  "best_y": 1869.4898853610905,
+  "best_x": [
+    2.042940982496817,
+    0.47242106439120324,
+    0.2014999025658124,
+    -0.21577062783294743,
+    0.018584831888054154
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.25072829999771784,
+  "objective_seconds": 0.0026480999804334715,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/ellipsoid_d5/llm/seed_1/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.45,
+        "local_fraction": 0.45,
+        "radius": 0.18,
+        "population": 30,
+        "generations": 5,
+        "reason": "Stagnation with zero recent improvement in 5D at 24/100 evals suggests the fixed design is too exploitative. Auto surrogate adapts between RBF and quadratic via held-out RMSE, which is safer than committing early with sparse data. Current_to_best balances convergence and diversity; increased exploration (0.45) and local_fraction (0.45) with a larger radius (0.18) inject novelty to escape the plateau while keeping surrogate exploitation. Population 30 and 5 generations give enough candidates without overspending the fixed budget."
+      },
+      "source": "saea"
+    }
+  ]
+}

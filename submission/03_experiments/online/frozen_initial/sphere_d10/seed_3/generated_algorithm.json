@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.7,
+    "crossover": 0.9,
+    "exploration": 0.45,
+    "local_fraction": 0.25,
+    "radius": 0.15,
+    "population": 36,
+    "generations": 5,
+    "reason": "With only 24 of 100 evaluations used and 10 stagnant steps with zero recent improvement, increase exploration moderately to escape a plateau while keeping current_to_best for reliable convergence. Auto surrogate adapts between RBF and quadratic via held-out RMSE given limited 10-D data. Moderate mutation/crossover balances diversity and exploitation; modest local_fraction/radius adds intensification without starving global search. Population 36 and 5 generations keep surrogate overhead reasonable within the fixed budget."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/sphere_d10/llm/seed_3/result.json",
+    "independent_online_trial": false
+  }
+}

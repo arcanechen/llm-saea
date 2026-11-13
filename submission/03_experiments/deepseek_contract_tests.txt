@@ -1,0 +1,18 @@
+test_common_initial_design_and_small_budget (test_core.CoreTests.test_common_initial_design_and_small_budget) ... ok
+test_exact_budget_bounds_and_reproducibility (test_core.CoreTests.test_exact_budget_bounds_and_reproducibility) ... ok
+test_failed_objective_preserves_journal (test_core.CoreTests.test_failed_objective_preserves_journal) ... ok
+test_generated_code_uses_literal_data (test_core.CoreTests.test_generated_code_uses_literal_data) ... ok
+test_invalid_values (test_core.CoreTests.test_invalid_values) ... ok
+test_quadratic_generalization (test_core.CoreTests.test_quadratic_generalization) ... ok
+test_replay_matches_all_dynamic_decisions (test_core.CoreTests.test_replay_matches_all_dynamic_decisions) ... ok
+test_save_contains_measured_history (test_core.CoreTests.test_save_contains_measured_history) ... ok
+test_deepseek_json_contract_and_provenance (test_core.DeepSeekContractTests.test_deepseek_json_contract_and_provenance) ... ok
+test_deepseek_rejects_truncated_or_invalid_json (test_core.DeepSeekContractTests.test_deepseek_rejects_truncated_or_invalid_json) ... ok
+test_deepseek_requires_its_own_key (test_core.DeepSeekContractTests.test_deepseek_requires_its_own_key) ... ok
+test_bad_response_does_not_become_offline_result (test_core.LLMContractTests.test_bad_response_does_not_become_offline_result) ... ok
+test_valid_structured_plan_and_request_limit (test_core.LLMContractTests.test_valid_structured_plan_and_request_limit) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.412s
+
+OK

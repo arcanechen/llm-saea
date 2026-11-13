@@ -1,0 +1,50 @@
+{
+  "problem": "griewank",
+  "method": "saea",
+  "seed": 0,
+  "best_y": 1.0251229971591824,
+  "best_x": [
+    -6.300796703309416,
+    2.985451932829143,
+    2.040660355496179,
+    -2.371845215877343,
+    7.339850306237992,
+    -0.6336774925393343,
+    -0.0776405061288088,
+    -6.225446877722327,
+    1.6683060999637433,
+    -9.109341878514954
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.4237923000000592,
+  "objective_seconds": 0.0017211000031238655,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "online_llm": false,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.65,
+        "crossover": 0.85,
+        "exploration": 0.2,
+        "local_fraction": 0.3,
+        "radius": 0.12,
+        "population": 40,
+        "generations": 6,
+        "reason": "Fixed reference design."
+      },
+      "source": "saea"
+    }
+  ]
+}

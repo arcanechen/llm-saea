@@ -1,0 +1,54 @@
+{
+  "problem": "ellipsoid",
+  "method": "saea",
+  "seed": 0,
+  "best_y": 12515.445222083788,
+  "best_x": [
+    -4.995514672792073,
+    -3.6875466468850604,
+    4.588138494625531,
+    -2.821758041301595,
+    4.190716216684336,
+    -0.0384776223944181,
+    -0.054744026587365546,
+    0.13077142006621578,
+    0.02001961011530362,
+    -0.04596449382294132
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.23723439999957918,
+  "objective_seconds": 0.0022551000001840293,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/ellipsoid_d10/llm/seed_0/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.8,
+        "exploration": 0.35,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 32,
+        "generations": 4,
+        "reason": "10-D with only 24 of 100 evaluations and 20 stagnant steps: the surrogate needs more diverse data before exploitation, so auto lets held-out RMSE choose RBF vs quadratic. Moderate exploration (0.35) and local_fraction (0.25) balance filling sparse regions against refinement around the incumbent; current_to_best with mutation 0.6 gives stable directional search at this dimensionality. Population 32 and 4 generations keep true-evaluation spend modest per surrogate update, and radius 0.15 matches the still-untuned landscape scale."
+      },
+      "source": "saea"
+    }
+  ]
+}

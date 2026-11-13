@@ -1,0 +1,49 @@
+{
+  "problem": "rastrigin",
+  "method": "saea",
+  "seed": 2,
+  "best_y": 20.212723916715102,
+  "best_x": [
+    -0.9805045379464126,
+    -0.02960318243781579,
+    0.6502924166654562,
+    -0.9030949588269879,
+    -0.02297477003017523
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.24637069999880623,
+  "objective_seconds": 0.0017496999898867216,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/rastrigin_d5/llm/seed_2/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.5,
+        "crossover": 0.7,
+        "exploration": 0.5,
+        "local_fraction": 0.5,
+        "radius": 0.18,
+        "population": 30,
+        "generations": 5,
+        "reason": "Stagnation is high (18 evals, zero recent improvement) at 24/100 budget, so break the stuck reference plan by raising exploration to 0.5 and local fraction to 0.5 for novelty/local diversification; auto-surrogate picks RBF vs quadratic by held-out RMSE to self-adapt model fit for a 5-D problem. current_to_best balance exploitation of improved candidates with DE repositioning; moderate mutation 0.5 and crossover 0.7 keep candidate diversity under surrogate scoring. Population 30/generations 5 keeps surrogate scoring cost low so enough budget reaches true objective calls."
+      },
+      "source": "saea"
+    }
+  ]
+}

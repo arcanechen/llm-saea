@@ -1,0 +1,95 @@
+{
+  "problem": "griewank",
+  "method": "llm",
+  "seed": 2,
+  "best_y": 0.39077022798979055,
+  "best_x": [
+    -3.0436428501088884,
+    4.917308454899363,
+    1.3552258004032396,
+    -6.797505823087825,
+    6.795341777959273
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 6.870982000000367,
+  "objective_seconds": 0.002061800019873772,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 4,
+    "llm_provider": "deepseek",
+    "llm_model": "deepseek-flash",
+    "online_llm": true,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.45,
+        "local_fraction": 0.35,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 8,
+        "reason": "Stagnation with zero recent improvement and a small 5-D budget (24/100 used) suggests shifting from pure exploitation to more exploration. Auto surrogate hedges between RBF and quadratic given limited data. current_to_best DE balances convergence and diversity; raised exploration and mutation to escape flat regions, moderate local_fraction/radius for local refinement without overcommitting, and fewer generations per cycle to adapt quickly within the fixed budget."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 44,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.85,
+        "crossover": 0.9,
+        "exploration": 0.6,
+        "local_fraction": 0.4,
+        "radius": 0.18,
+        "population": 28,
+        "generations": 6,
+        "reason": "With 44/100 evaluations used and notable recent improvement (0.43) but high surrogate error (cv RMSE ~0.9), the surrogate is still unreliable, so auto selection hedges RBF vs quadratic. current_to_best DE gives balanced convergence/diversity; moderately raised mutation and exploration favor escaping the still-flat landscape while keeping exploitation via local refinement. Reduced population/generations per cycle adapts quickly within the fixed budget."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 64,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.9,
+        "crossover": 0.9,
+        "exploration": 0.9,
+        "local_fraction": 0.35,
+        "radius": 0.15,
+        "population": 24,
+        "generations": 5,
+        "reason": "Stagnation of 13 with zero recent improvement and high surrogate CV RMSE (~0.74) signals a stalled, unreliable landscape; auto keeps RBF/quadratic hedging. Keeping current_to_best preserves convergence while raising exploration to 0.9 favors novelty to escape the plateau. Smaller population/generations give frequent adaptive restarts within the remaining 36 evaluations, and moderate local_fraction/radius balance local refinement against diversity."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 84,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.85,
+        "exploration": 0.6,
+        "local_fraction": 0.3,
+        "radius": 0.12,
+        "population": 20,
+        "generations": 4,
+        "reason": "Only 16 evaluations remain, so population and generations are kept small for frequent restarts. Surrogate CV RMSE is moderately high (~0.61), favoring auto to hedge RBF vs quadratic. Recent improvement is strong but stagnation shows 5, so moderate exploration (0.6) balances exploiting progress with novelty; current_to_best with moderate mutation/crossover converges without over-perturbing, and a modest local_fraction/radius refines promising regions."
+      },
+      "source": "deepseek"
+    }
+  ]
+}

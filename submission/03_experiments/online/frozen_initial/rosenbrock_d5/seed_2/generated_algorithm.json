@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.7,
+    "crossover": 0.9,
+    "exploration": 0.6,
+    "local_fraction": 0.4,
+    "radius": 0.15,
+    "population": 30,
+    "generations": 5,
+    "reason": "At 24/100 evaluations with 5 stagnant steps and no recent improvement, the surrogate is still data-poor, so auto selection lets held-out RMSE choose between RBF and quadratic rather than committing early. current_to_best operator balances exploitation of the incumbent with DE differential diversity, suited for a 5D bounded landscape. Exploration is raised to 0.6 to break stagnation via novelty in standardized predicted-objective-minus-distance acquisition, while local_fraction 0.4 and radius 0.15 (normalized) keep a meaningful share of candidates in refined local search without over-concentrating. Population 30 and generations 5 cap surrogate generations per cycle to conserve the fixed true-evaluation budget, leaving room for iterative updates as more data arrives."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/rosenbrock_d5/llm/seed_2/result.json",
+    "independent_online_trial": false
+  }
+}

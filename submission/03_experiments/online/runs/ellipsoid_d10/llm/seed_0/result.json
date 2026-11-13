@@ -1,0 +1,100 @@
+{
+  "problem": "ellipsoid",
+  "method": "llm",
+  "seed": 0,
+  "best_y": 121191.74100298803,
+  "best_x": [
+    -5.0,
+    4.11480715076898,
+    1.361958991881906,
+    5.0,
+    -0.6420237046656219,
+    3.1606997896524742,
+    1.9127717818258567,
+    -0.5260223890875562,
+    0.14808161718656176,
+    -0.2065902159791726
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 7.420238800001243,
+  "objective_seconds": 0.003138399992167251,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 4,
+    "llm_provider": "deepseek",
+    "llm_model": "deepseek-flash",
+    "online_llm": true,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.8,
+        "exploration": 0.35,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 32,
+        "generations": 4,
+        "reason": "10-D with only 24 of 100 evaluations and 20 stagnant steps: the surrogate needs more diverse data before exploitation, so auto lets held-out RMSE choose RBF vs quadratic. Moderate exploration (0.35) and local_fraction (0.25) balance filling sparse regions against refinement around the incumbent; current_to_best with mutation 0.6 gives stable directional search at this dimensionality. Population 32 and 4 generations keep true-evaluation spend modest per surrogate update, and radius 0.15 matches the still-untuned landscape scale."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 44,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.8,
+        "exploration": 0.4,
+        "local_fraction": 0.25,
+        "radius": 0.13,
+        "population": 32,
+        "generations": 4,
+        "reason": "At 10-D with 44/100 evaluations and minimal stagnation, the surrogate still benefits from diverse data, so auto lets held-out RMSE pick RBF vs quadratic. High CV RMSE (1.42) signals model error, so exploration is nudged to 0.4 to favor sampling over fitting predicted optima. current_to_best with mutation 0.6 remains stable for directional search at this dimensionality; local_fraction 0.25 and radius 0.13 keep refinement tight around the incumbent without starving global coverage. Population 32 with 4 generations limits true-evaluation spend per surrogate update."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 64,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.85,
+        "exploration": 0.9,
+        "local_fraction": 0.35,
+        "radius": 0.18,
+        "population": 26,
+        "generations": 3,
+        "reason": "Stagnation of 21 with zero recent improvement and high CV RMSE (1.07) indicates the surrogate is misfit and exploitation has stalled. Raising exploration to 0.9 leans on novelty to escape the incumbent basin rather than trusting poor predictions. auto still lets held-out RMSE choose RBF vs quadratic given scarce data (64/100). current_to_best keeps directional pressure but mutation 0.7 and crossover 0.85 add diversity; local_fraction 0.35 with wider radius 0.18 balances local refinement and coverage given the remaining budget. Smaller population 26 and 3 generations limit true-evaluation spend per update so more surrogate cycles fit in the tight remaining budget."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 84,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.8,
+        "crossover": 0.9,
+        "exploration": 1.2,
+        "local_fraction": 0.25,
+        "radius": 0.22,
+        "population": 18,
+        "generations": 2,
+        "reason": "With only 16 evaluations left and prolonged stagnation (41) plus zero recent improvement, exploitation has stalled and the surrogate's held-out RMSE (0.13) is moderate but not poor. Raising exploration to 1.2 and widening radius to 0.22 pushes toward novelty to escape the incumbent basin, while auto re-selects RBF vs quadratic to control misfit. current_to_best retains directional pressure; moderate mutation 0.8 and crossover 0.9 preserve diversity. Lower local_fraction 0.25 and small population/generations (18/2) limit true-evaluation spend per cycle so more surrogate-guided restarts fit the tight remaining budget."
+      },
+      "source": "deepseek"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.7,
+    "crossover": 0.9,
+    "exploration": 0.45,
+    "local_fraction": 0.35,
+    "radius": 0.12,
+    "population": 36,
+    "generations": 5,
+    "reason": "With only 24/100 evaluations used and heavy stagnation (23), the current plan is over-exploiting too early. Auto surrogate lets held-out RMSE pick RBF vs quadratic as data accumulates; slight exploration increase (0.2->0.45) encourages novelty in the 5-D space while keeping local refinement modest. current_to_best retains convergence pressure; small population and generations keep surrogate cost low within the fixed budget."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/griewank_d5/llm/seed_3/result.json",
+    "independent_online_trial": false
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.5,
+    "crossover": 0.8,
+    "exploration": 0.5,
+    "local_fraction": 0.25,
+    "radius": 0.15,
+    "population": 30,
+    "generations": 5,
+    "reason": "With only 24/100 evaluations at dimension 10, the surrogate is still data-poor, so auto selection lets held-out RMSE pick RBF vs quadratic; current_to_best balances convergence near the incumbent. Stagnation (16) with zero recent improvement argues for higher exploration to escape flat/premature regions and a modest radius for local refinement. Smaller population/generations (30/5) preserves expensive budget for more surrogate updates, with moderate local_fraction to alternate global novelty and local exploitation."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/ellipsoid_d10/llm/seed_2/result.json",
+    "independent_online_trial": false
+  }
+}

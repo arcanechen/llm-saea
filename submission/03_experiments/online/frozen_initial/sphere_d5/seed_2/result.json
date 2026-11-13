@@ -1,0 +1,49 @@
+{
+  "problem": "sphere",
+  "method": "saea",
+  "seed": 2,
+  "best_y": 0.12443787140013837,
+  "best_x": [
+    -0.189627392933291,
+    0.1668390467217229,
+    0.1780894816015577,
+    -0.06902273977608075,
+    -0.15544791306138617
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.3625812999998743,
+  "objective_seconds": 0.0012406000241753645,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/sphere_d5/llm/seed_2/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.8,
+        "crossover": 0.9,
+        "exploration": 0.45,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 8,
+        "reason": "With only 24/100 evaluations and 20 stagnant iterations, rely on the auto surrogate to pick RBF vs quadratic by held-out RMSE, and raise exploration to 0.45 so the novelty term pushes sampling away from an exhausted region. current_to_best balances convergence with diversity at this small budget; moderate mutation/crossover keep DE from collapsing prematurely. A smaller radius (0.15) and low local_fraction concentrate exploitation once the surrogate is trustworthy, while population 30 and generations 8 keep surrogate-assisted generations cheap relative to the remaining true-evaluation budget of 76."
+      },
+      "source": "saea"
+    }
+  ]
+}

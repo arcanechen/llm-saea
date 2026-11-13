@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.6,
+    "crossover": 0.85,
+    "exploration": 0.35,
+    "local_fraction": 0.25,
+    "radius": 0.12,
+    "population": 36,
+    "generations": 6,
+    "reason": "Early stage with only 24/100 evaluations and 10-step stagnation, so retain moderate novelty exploration (0.35) to escape flat regions while still exploiting the surrogate. Auto surrogate adapts between RBF and quadratic as data accumulates; current_to_best balances convergence with diversity. Moderate mutation and high crossover favor recombination in 10D; small local_fraction and radius keep local refinement cheap. Population/generations sized to the remaining budget without overspending true evaluations."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/ackley_d10/llm/seed_3/result.json",
+    "independent_online_trial": false
+  }
+}

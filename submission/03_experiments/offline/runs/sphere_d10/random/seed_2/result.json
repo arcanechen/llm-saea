@@ -1,0 +1,33 @@
+{
+  "problem": "sphere",
+  "method": "random",
+  "seed": 2,
+  "best_y": 38.69670197595685,
+  "best_x": [
+    -3.838772822170453,
+    2.410399849704314,
+    -1.6244217438882802,
+    -1.3980733606544216,
+    -0.4321994576684043,
+    -0.37243348829222533,
+    2.909351734930138,
+    -2.042494863546546,
+    -0.3853411342534194,
+    -0.6686097420514088
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.002197700001488556,
+  "objective_seconds": 0.000844400003188639,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "online_llm": false,
+    "objective_delay_injected": false
+  },
+  "events": []
+}

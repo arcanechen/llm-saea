@@ -1,0 +1,54 @@
+{
+  "problem": "griewank",
+  "method": "saea",
+  "seed": 2,
+  "best_y": 0.9603099691897534,
+  "best_x": [
+    -12.165443734283052,
+    -0.728620782218961,
+    -7.4647993046764185,
+    12.432402825538034,
+    6.012629048386195,
+    1.5688340730747683,
+    7.211716329142234,
+    8.460430919342663,
+    0.00400915751843911,
+    1.836008202648351
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.3986726000002818,
+  "objective_seconds": 0.00164549999681185,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/griewank_d10/llm/seed_2/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.45,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 8,
+        "reason": "With only 24 of 100 evaluations used and 12 stagnant steps at zero recent improvement, the optimizer needs more exploration while remaining sample-efficient. Auto surrogate lets held-out RMSE pick RBF vs quadratic given the 10-D space and small dataset. current_to_best balances convergence toward the incumbent with diversity in DE. Moderate mutation (0.7) and high crossover (0.9) give good mixing; exploration 0.45 adds novelty pressure to escape stagnation; local_fraction 0.25 with radius 0.15 focuses some effort near promising regions. Population 30 and 8 generations keep candidate generation cheap relative to remaining budget without overspending."
+      },
+      "source": "saea"
+    }
+  ]
+}

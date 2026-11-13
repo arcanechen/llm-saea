@@ -1,0 +1,49 @@
+{
+  "problem": "ackley",
+  "method": "saea",
+  "seed": 0,
+  "best_y": 1.4792222092216325,
+  "best_x": [
+    0.17903117240825317,
+    0.17780225708538744,
+    0.16576536155235466,
+    0.09779946963137309,
+    0.09827664940973868
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.37996689999999944,
+  "objective_seconds": 0.0021383000239438843,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/ackley_d5/llm/seed_0/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.7,
+        "exploration": 0.5,
+        "local_fraction": 0.5,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 8,
+        "reason": "At 24/100 evaluations with stagnation 20 and zero recent improvement, the objective appears flat or noisy locally; boosting exploration to 0.5 and local_fraction to 0.5 balances surrogate-guided refinement with novelty-driven sampling to escape stagnation. Auto surrogate chooses RBF or quadratic by held-out RMSE, robust when data is sparse (5-D, 24 samples). current_to_best DE with moderate mutation 0.6 and crossover 0.7 provides balanced convergence/diversity; population 30 and 8 generations keep surrogate-assisted steps affordable within the fixed budget without extra true evaluations."
+      },
+      "source": "saea"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.6,
+    "crossover": 0.8,
+    "exploration": 0.45,
+    "local_fraction": 0.25,
+    "radius": 0.15,
+    "population": 30,
+    "generations": 5,
+    "reason": "Early stage with 24/100 evaluations and stagnation of 18 with zero recent improvement, so increase exploration to escape a flat region while keeping exploitation via current_to_best. Auto surrogate adapts between RBF and quadratic as data grows; modest population/generations limit surrogate cost against the remaining budget. Local_fraction and radius are kept moderate to balance refinement and coverage."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/ellipsoid_d5/llm/seed_4/result.json",
+    "independent_online_trial": false
+  }
+}

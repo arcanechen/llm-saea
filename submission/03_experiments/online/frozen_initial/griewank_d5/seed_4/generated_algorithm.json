@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.5,
+    "crossover": 0.7,
+    "exploration": 0.45,
+    "local_fraction": 0.4,
+    "radius": 0.18,
+    "population": 32,
+    "generations": 8,
+    "reason": "Budget 100 with only 24 evaluations and stagnation 9 suggests over-exploitation, so raise exploration to 0.45 and radius to 0.18 for broader surrogate-guided sampling. Auto surrogate adapts via held-out RMSE between RBF and quadratic given sparse 5-D data. current_to_best balances stable convergence with directional drift; mutation 0.5 and crossover 0.7 are moderate for reliable surrogate pre-screening. Population 32 keeps selection pressure per generation while generations 8 fit the remaining budget; local_fraction 0.4 splits effort between local refinement and global exploration."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/griewank_d5/llm/seed_4/result.json",
+    "independent_online_trial": false
+  }
+}

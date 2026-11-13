@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.5,
+    "crossover": 0.7,
+    "exploration": 0.6,
+    "local_fraction": 0.45,
+    "radius": 0.2,
+    "population": 30,
+    "generations": 5,
+    "reason": "Stagnation with zero recent improvement and a fairly small evaluation budget suggests shifting toward exploration rather than pure local refinement. Raising exploration and local radius lets the surrogate's novelty term drive sampling away from a stalled region, while auto keeps the surrogate choice adaptive between RBF and quadratic as data accumulates. current_to_best balances convergence with diversity; moderate mutation/crossover keep candidate generation stable given only 5 dims. Population and generations are trimmed to conserve the fixed budget for more sequential model updates."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/ackley_d5/llm/seed_1/result.json",
+    "independent_online_trial": false
+  }
+}

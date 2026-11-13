@@ -1,0 +1,49 @@
+{
+  "problem": "ackley",
+  "method": "saea",
+  "seed": 2,
+  "best_y": 2.2888925633724218,
+  "best_x": [
+    -0.5165493553637868,
+    -0.036862747001449314,
+    0.11681506795317542,
+    0.14504192347019007,
+    -0.17199308472063812
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.2532777000014903,
+  "objective_seconds": 0.0019591999698604923,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/ackley_d5/llm/seed_2/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.8,
+        "exploration": 0.35,
+        "local_fraction": 0.3,
+        "radius": 0.12,
+        "population": 32,
+        "generations": 5,
+        "reason": "24/100 evaluations with stagnation 20 and zero recent improvement suggests the reference design is over-exploiting. Keep auto surrogate selection to adapt between RBF and quadratic as data grows, and retain current_to_best for stable convergence. Raise exploration to 0.35 to push novelty via the distance heuristic and escape the flat region, while keeping radius moderate at 0.12 for local refinement. Slightly smaller population/generations (32x5) reduces surrogate cost per cycle so more frequent model updates occur within the remaining budget."
+      },
+      "source": "saea"
+    }
+  ]
+}

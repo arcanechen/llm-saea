@@ -1,0 +1,45 @@
+{
+  "problem": "ackley",
+  "method": "saea",
+  "seed": 1,
+  "best_y": 1.3921437392661358,
+  "best_x": [
+    -0.18413148589404127,
+    -0.041994908657404295,
+    0.053438045858166916,
+    0.25304589431740254,
+    0.06357144721641195
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.36009629999898607,
+  "objective_seconds": 0.0019018000039068284,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "online_llm": false,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.65,
+        "crossover": 0.85,
+        "exploration": 0.2,
+        "local_fraction": 0.3,
+        "radius": 0.12,
+        "population": 40,
+        "generations": 6,
+        "reason": "Fixed reference design."
+      },
+      "source": "saea"
+    }
+  ]
+}

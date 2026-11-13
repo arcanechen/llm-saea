@@ -1,0 +1,95 @@
+{
+  "problem": "ackley",
+  "method": "llm",
+  "seed": 3,
+  "best_y": 2.198338089976723,
+  "best_x": [
+    -0.8599610092764607,
+    0.1245138477862282,
+    -0.14905084453538553,
+    -0.12014328912195715,
+    -0.060032584763421326
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 7.4838515000010375,
+  "objective_seconds": 0.0024974999723781366,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 4,
+    "llm_provider": "deepseek",
+    "llm_model": "deepseek-flash",
+    "online_llm": true,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.6,
+        "local_fraction": 0.4,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 8,
+        "reason": "High stagnation (23) with zero recent improvement means the current plan over-exploits; raising exploration to 0.6 and local_fraction to 0.4 pushes novelty-driven sampling in under-covered regions while radius 0.15 keeps local refinement feasible in 5D. auto surrogate adapts between RBF and quadratic given sparse 24-point data; current_to_best with strong crossover (0.9) balances convergence and diversity without extra true evaluations. Population 30 and 8 generations fit the remaining ~76 evaluation budget with surrogate screening."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 44,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.8,
+        "crossover": 0.85,
+        "exploration": 0.9,
+        "local_fraction": 0.5,
+        "radius": 0.2,
+        "population": 28,
+        "generations": 7,
+        "reason": "Stagnation is 18 with zero recent improvement, so the search is over-exploiting. Raising exploration to 0.9 and local_fraction to 0.5 encourages novelty-driven sampling across a 5D space while radius 0.2 allows local refinement. auto surrogate hedges between RBF and quadratic given only 44 evaluations (sparse, moderate CV error 0.46). current_to_best with mutation 0.8 and crossover 0.85 balances convergence with diversity; population 28 and 7 generations keep surrogate screening within the remaining budget without extra true evaluations."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 64,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.9,
+        "crossover": 0.9,
+        "exploration": 1.1,
+        "local_fraction": 0.45,
+        "radius": 0.25,
+        "population": 30,
+        "generations": 6,
+        "reason": "Stagnation of 38 with zero recent improvement indicates heavy over-exploitation, and CV error 0.30 suggests a usable but imperfect surrogate. Raising exploration to 1.1 and enlarging radius to 0.25 pushes novelty-driven sampling in the 5D space, while moderate local_fraction 0.45 preserves refinement. auto hedges RBF vs quadratic given only 64 of 100 evaluations; current_to_best with slightly higher mutation/crossover maintains diversity without destabilizing convergence, and population 30 with 6 generations fits the tight remaining budget without extra true evaluations."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 84,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.8,
+        "crossover": 0.9,
+        "exploration": 1.2,
+        "local_fraction": 0.3,
+        "radius": 0.2,
+        "population": 24,
+        "generations": 5,
+        "reason": "Near budget end (84/100) with stagnation 8 and modest recent improvement; CV RMSE 0.35 indicates imperfect but usable surrogate, so auto hedges RBF vs quadratic. Keep novelty pressure via exploration 1.2 and radius 0.2 for 5D coverage, but lower local_fraction to 0.3 and population to 24 with 5 generations so the small remaining budget is spent on fewer, better-targeted candidates rather than a large per-generation batch. current_to_best with mutation 0.8 balances convergence and diversity."
+      },
+      "source": "deepseek"
+    }
+  ]
+}

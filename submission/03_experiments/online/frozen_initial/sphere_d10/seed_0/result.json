@@ -1,0 +1,54 @@
+{
+  "problem": "sphere",
+  "method": "saea",
+  "seed": 0,
+  "best_y": 1.6984319105081154,
+  "best_x": [
+    0.4548175247826469,
+    0.27793400911482546,
+    -0.646064527917293,
+    0.068624640538121,
+    -0.6176587261730626,
+    -0.1215642092863316,
+    -0.2526245852107323,
+    0.490886203172165,
+    0.04905078751142611,
+    0.5373474820298032
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.32206159999986994,
+  "objective_seconds": 0.0011731000086001586,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/sphere_d10/llm/seed_0/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.8,
+        "exploration": 0.35,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 36,
+        "generations": 5,
+        "reason": "With only 24 of 100 evaluations and full stagnation, the surrogate is still data-scarce in 10-D; auto lets held-out RMSE pick between RBF and ridge-quadratic rather than committing prematurely. current_to_best balances convergence with diversity at this early stage, and mildly raised exploration (0.35) with a slightly larger radius (0.15) encourages sampling under-covered regions since nearest-distance novelty is the only uncertainty proxy available. A moderate population (36) and few generations (5) per cycle keep true-evaluation spend efficient given the fixed budget, while local_fraction 0.25 retains some intensification around the best-so-far point."
+      },
+      "source": "saea"
+    }
+  ]
+}

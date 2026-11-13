@@ -1,0 +1,54 @@
+{
+  "problem": "rastrigin",
+  "method": "saea",
+  "seed": 0,
+  "best_y": 77.65631832985574,
+  "best_x": [
+    -2.1694971275559545,
+    -1.1420654495478892,
+    1.7062132182006637,
+    -1.5032720148050043,
+    2.0032350277964284,
+    -0.9739396168227703,
+    1.7191587947298812,
+    0.9526719045565768,
+    -0.09791738638082492,
+    -1.0552665995489683
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.32405300000027637,
+  "objective_seconds": 0.0015120999960345216,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/rastrigin_d10/llm/seed_0/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.85,
+        "exploration": 0.35,
+        "local_fraction": 0.4,
+        "radius": 0.15,
+        "population": 32,
+        "generations": 6,
+        "reason": "Only 24 of 100 evaluations used and stagnation=20 means recent progress stalled with no improvement; increasing exploration and local_fraction slightly encourages novelty in a 10-D space while auto surrogate adapts its fit. Moderate population/generations keep surrogate fitting and candidate generation cheap so most remaining budget goes to true evaluations; current_to_best with moderate mutation balances convergence and diversity."
+      },
+      "source": "saea"
+    }
+  ]
+}

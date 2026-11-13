@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.8,
+    "crossover": 0.9,
+    "exploration": 0.55,
+    "local_fraction": 0.5,
+    "radius": 0.2,
+    "population": 30,
+    "generations": 8,
+    "reason": "High-dimensional (10D) problem with severe stagnation (19) and no recent improvement, so the optimizer needs more exploration and local refinement to escape a flat/uninformative region. Increasing exploration (0.55) and local_fraction (0.5) with a larger radius (0.2) balances novelty-based sampling against predicted-objective exploitation, since distance is only a novelty heuristic, not posterior uncertainty. Auto surrogate lets held-out RMSE pick RBF vs quadratic given few (24) evaluations. current_to_best with higher mutation/crossover keeps population diversity while guiding toward the incumbent, and a moderate population/generations ratio fits the remaining ~76-evaluation budget without over-allocating per generation."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/ackley_d10/llm/seed_1/result.json",
+    "independent_online_trial": false
+  }
+}

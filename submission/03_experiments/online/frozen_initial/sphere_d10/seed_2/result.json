@@ -1,0 +1,54 @@
+{
+  "problem": "sphere",
+  "method": "saea",
+  "seed": 2,
+  "best_y": 1.5944074028458617,
+  "best_x": [
+    0.3897085588902822,
+    0.10578032760041722,
+    0.2290295391793018,
+    -0.13878395116309683,
+    0.66745069250487,
+    -0.6429308679806507,
+    0.04456365208037205,
+    -0.5753700225801861,
+    -0.40814338569730246,
+    -0.034081023494615614
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.3680616999990889,
+  "objective_seconds": 0.0011759999579226132,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/sphere_d10/llm/seed_2/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.45,
+        "local_fraction": 0.35,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 7,
+        "reason": "With only 24 of 100 evaluations used in 10-D, auto surrogate hedges between RBF and quadratic as data grows. Stagnation of 12 and zero recent improvement calls for more exploration (0.45) and a slightly larger local radius/step to escape flat regions, while current_to_best with moderate mutation preserves convergence. Population 30 keeps surrogate training cheap so generations can refresh the model more often; local_fraction 0.35 balances global and local sampling."
+      },
+      "source": "saea"
+    }
+  ]
+}

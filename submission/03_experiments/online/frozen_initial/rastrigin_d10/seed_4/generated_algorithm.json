@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.6,
+    "crossover": 0.9,
+    "exploration": 0.3,
+    "local_fraction": 0.25,
+    "radius": 0.15,
+    "population": 30,
+    "generations": 5,
+    "reason": "With 10D and only 24/100 evaluations, sample density is very sparse, so auto surrogate selection balances RBF flexibility against a quadratic fallback via held-out RMSE. A moderate population (30) and 5 generations keep each surrogate fit cheap while producing enough candidates; current_to_best gives focused movement toward the incumbent with mutation 0.6 for diversity. Exploration 0.3 and local_fraction 0.25 with radius 0.15 favor broad coverage early (novelty is a heuristic, not uncertainty) while reserving a small local search fraction, appropriate since no progress has been observed yet and over-exploiting a poorly fit surrogate is risky."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/rastrigin_d10/llm/seed_4/result.json",
+    "independent_online_trial": false
+  }
+}

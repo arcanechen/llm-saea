@@ -1,0 +1,45 @@
+{
+  "problem": "rosenbrock",
+  "method": "saea",
+  "seed": 4,
+  "best_y": 6.182492401914411,
+  "best_x": [
+    0.16608611522417815,
+    0.1602628461221154,
+    -0.06107271871789255,
+    0.04994334760556107,
+    -0.013889311510964397
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.36960760000147275,
+  "objective_seconds": 0.0015140000050450908,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "online_llm": false,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.65,
+        "crossover": 0.85,
+        "exploration": 0.2,
+        "local_fraction": 0.3,
+        "radius": 0.12,
+        "population": 40,
+        "generations": 6,
+        "reason": "Fixed reference design."
+      },
+      "source": "saea"
+    }
+  ]
+}

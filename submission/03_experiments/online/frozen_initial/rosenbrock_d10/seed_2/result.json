@@ -1,0 +1,54 @@
+{
+  "problem": "rosenbrock",
+  "method": "saea",
+  "seed": 2,
+  "best_y": 82.41845528548612,
+  "best_x": [
+    -0.16924409192985035,
+    0.052496586912364585,
+    -0.016745249268183438,
+    -0.33996873674324934,
+    0.5533283890488452,
+    0.8899438936198276,
+    0.654183608346051,
+    0.6364863370631029,
+    0.6389767044932948,
+    0.4399682065916446
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.26700390000041807,
+  "objective_seconds": 0.00162980001186952,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/rosenbrock_d10/llm/seed_2/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.85,
+        "exploration": 0.45,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 5,
+        "reason": "With 24 of 100 evaluations and 12 stagnated steps, increase exploration to escape the plateau while keeping current_to_best for balanced convergence. Auto surrogate adapts between RBF/quadratic as data accumulates in 10-D. Moderate population/generations keep surrogate fitting cheap per cycle; small local_fraction with radius 0.15 adds focused local search without over-exploiting a weak surrogate."
+      },
+      "source": "saea"
+    }
+  ]
+}

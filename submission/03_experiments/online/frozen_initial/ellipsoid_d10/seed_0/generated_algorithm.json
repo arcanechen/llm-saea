@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.6,
+    "crossover": 0.8,
+    "exploration": 0.35,
+    "local_fraction": 0.25,
+    "radius": 0.15,
+    "population": 32,
+    "generations": 4,
+    "reason": "10-D with only 24 of 100 evaluations and 20 stagnant steps: the surrogate needs more diverse data before exploitation, so auto lets held-out RMSE choose RBF vs quadratic. Moderate exploration (0.35) and local_fraction (0.25) balance filling sparse regions against refinement around the incumbent; current_to_best with mutation 0.6 gives stable directional search at this dimensionality. Population 32 and 4 generations keep true-evaluation spend modest per surrogate update, and radius 0.15 matches the still-untuned landscape scale."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/ellipsoid_d10/llm/seed_0/result.json",
+    "independent_online_trial": false
+  }
+}

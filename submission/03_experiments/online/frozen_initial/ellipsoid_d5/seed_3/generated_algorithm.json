@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.6,
+    "crossover": 0.85,
+    "exploration": 0.5,
+    "local_fraction": 0.25,
+    "radius": 0.15,
+    "population": 30,
+    "generations": 6,
+    "reason": "Low dimension (5) and early budget use (24/100) with zero recent improvement and stagnation 5 favor balanced exploration over exploitation. Auto surrogate adapts between RBF and quadratic as data grows. current_to_best gives adaptive step sizing toward best for smoother convergence. Raising exploration to 0.5 adds novelty pressure in acquisition to escape the plateau, while moderate radius 0.15 and local_fraction 0.25 keep some local refinement without over-committing. Smaller population (30) and 6 generations per cycle leave room for more surrogate refits within the fixed budget."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/ellipsoid_d5/llm/seed_3/result.json",
+    "independent_online_trial": false
+  }
+}

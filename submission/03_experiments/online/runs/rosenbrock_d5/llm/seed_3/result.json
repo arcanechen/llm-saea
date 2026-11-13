@@ -1,0 +1,95 @@
+{
+  "problem": "rosenbrock",
+  "method": "llm",
+  "seed": 3,
+  "best_y": 6.747610858014987,
+  "best_x": [
+    0.4697101302952653,
+    0.21819942905579737,
+    -0.1119435494236245,
+    0.1195740658545108,
+    -0.024619164371042057
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 6.527544399999897,
+  "objective_seconds": 0.0018427000068186317,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 4,
+    "llm_provider": "deepseek",
+    "llm_model": "deepseek-flash",
+    "online_llm": true,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.8,
+        "crossover": 0.7,
+        "exploration": 0.6,
+        "local_fraction": 0.25,
+        "radius": 0.2,
+        "population": 30,
+        "generations": 5,
+        "reason": "With 24/100 evaluations used and complete stagnation, the search needs more diversification: higher exploration and mutation mixed with current_to_best exploitation. Auto surrogate adapts model choice to small data. Moderate local_fraction and radius allow occasional focused refinement without overcommitting to a stale region."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 44,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.75,
+        "exploration": 0.9,
+        "local_fraction": 0.2,
+        "radius": 0.15,
+        "population": 28,
+        "generations": 5,
+        "reason": "With 44/100 evaluations used, moderate stagnation (7) and weak recent improvement, the search should diversify moderately while retaining exploitation. Auto surrogate adapts between RBF and quadratic given the relatively high CV RMSE, indicating model uncertainty. Higher exploration (0.9) and current_to_best balance novelty and convergence; moderate mutation/crossover and a modest population of 28 keep evaluation cost controlled. Local_fraction 0.2 and radius 0.15 limit overfocusing on a stale region."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 64,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.8,
+        "crossover": 0.7,
+        "exploration": 1.2,
+        "local_fraction": 0.15,
+        "radius": 0.2,
+        "population": 24,
+        "generations": 5,
+        "reason": "With 64/100 evaluations used, stagnation of 12 and zero recent improvement, exploration must increase to escape the stale region. High CV RMSE (0.43) signals surrogate uncertainty, so auto selection plus elevated exploration (1.2) favors novelty over exploitation. current_to_best balances guided movement with diversity; mutation 0.8 and crossover 0.7 maintain search spread. A smaller population (24) and modest generations (5) keep the limited remaining budget under control, while low local_fraction (0.15) and radius 0.2 avoid overconcentration on a possibly misleading local model."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 84,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.8,
+        "exploration": 0.9,
+        "local_fraction": 0.2,
+        "radius": 0.15,
+        "population": 20,
+        "generations": 5,
+        "reason": "Only 16 evaluations remain, so the surrogate-assisted plan must be cheap and robust. Stagnation is mild (8) with tiny recent improvement and moderate CV RMSE (~0.40), so keep moderate exploration (0.9) rather than a high novelty chase. auto lets held-out RMSE choose RBF vs quadratic; current_to_best gives guided yet diverse moves. A smaller population (20) and 5 generations fit the tight budget, while modest local_fraction (0.2) and radius 0.15 allow limited local refinement without overcommitting to the surrogate."
+      },
+      "source": "deepseek"
+    }
+  ]
+}

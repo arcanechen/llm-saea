@@ -1,0 +1,100 @@
+{
+  "problem": "ackley",
+  "method": "llm",
+  "seed": 4,
+  "best_y": 4.188539705007681,
+  "best_x": [
+    -0.6432406720350814,
+    -0.9699886119255208,
+    0.5962909282435236,
+    0.6883826203173076,
+    -0.08619348875446065,
+    -0.1681258347888761,
+    -0.7463892294011254,
+    0.683112562178513,
+    0.932688661666143,
+    -0.48054465247683
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 7.551408799998171,
+  "objective_seconds": 0.0025509999941277783,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 4,
+    "llm_provider": "deepseek",
+    "llm_model": "deepseek-flash",
+    "online_llm": true,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.85,
+        "exploration": 0.35,
+        "local_fraction": 0.35,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 5,
+        "reason": "With only 24 of 100 evaluations used in a 10-D problem and 6 stagnated steps with zero recent improvement, boosting exploration and local search helps escape the plateau. Auto surrogate adapts via held-out RMSE among RBF/quadratic. current_to_best balances convergence toward the surrogate optimum with diversity; moderate mutation and high crossover maintain sampling. A modest population/generation count limits surrogate overhead so more of the fixed budget goes to true evaluations, while exploration 0.35 and radius 0.15 balance novelty-driven exploration against exploitation."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 44,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.65,
+        "crossover": 0.9,
+        "exploration": 0.4,
+        "local_fraction": 0.4,
+        "radius": 0.18,
+        "population": 32,
+        "generations": 5,
+        "reason": "44 of 100 evaluations used in 10-D with zero stagnation and strong recent improvement, so retain the current_to_best balance but lift exploration and radius slightly to keep novelty while the auto surrogate picks RBF or quadratic by held-out RMSE. High crossover and moderate mutation maintain diversity; local_fraction 0.4 emphasizes local refinement as the budget nears halfway. Population 32 with 5 generations keeps surrogate overhead low so most of the fixed budget goes to true evaluations."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 64,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.55,
+        "local_fraction": 0.45,
+        "radius": 0.2,
+        "population": 28,
+        "generations": 4,
+        "reason": "64 of 100 evaluations used in 10-D, stagnation of 6 with modest recent improvement (0.19) and CV RMSE 0.45 indicate the surrogate is only moderately reliable, so keep auto to let held-out RMSE pick RBF vs quadratic. Slightly higher exploration (0.55) and larger radius (0.2) counter stagnation by favoring novel regions under the distance-based acquisition. current_to_best with mutation 0.7 balances convergence and diversity; high crossover 0.9 preserves mixing. Local_fraction 0.45 tightens refinement as budget nears the end. Smaller population 28 with 4 generations keeps surrogate overhead low so remaining true evaluations go to the objective; the previous plan's stagnation justifies a modest novelty boost without abandoning refinement."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 84,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.65,
+        "local_fraction": 0.5,
+        "radius": 0.22,
+        "population": 28,
+        "generations": 4,
+        "reason": "Only 16 true evaluations remain, so surrogate overhead must stay low: keep population 28 and 4 generations. CV RMSE 0.277 is moderate, supporting auto to let held-out RMSE pick RBF vs quadratic. Stagnation of 3 with strong recent improvement (0.17) but nearing the budget favors a slight novelty boost (exploration 0.65, radius 0.22) to avoid premature convergence while still refining. current_to_best with mutation 0.7 and crossover 0.9 balances convergence and diversity; local_fraction 0.5 concentrates remaining budget on the incumbent basin."
+      },
+      "source": "deepseek"
+    }
+  ]
+}

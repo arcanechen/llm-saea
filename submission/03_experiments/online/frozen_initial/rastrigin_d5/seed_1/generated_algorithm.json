@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "best1",
+    "mutation": 0.9,
+    "crossover": 0.7,
+    "exploration": 0.6,
+    "local_fraction": 0.45,
+    "radius": 0.2,
+    "population": 30,
+    "generations": 8,
+    "reason": "With 5D, 24/100 evals used and long stagnation (19) with zero recent improvement, the search is likely over-exploiting. Auto surrogate keeps RBF/quadratic flexibility while data is still sparse. best1 drives toward the incumbent best to escape stagnation, and I raise exploration to 0.6 and local_fraction/radius moderately so the acquisition prunes toward novel regions rather than over-crowding near one optimum. Population 30 with 8 generations fits the remaining budget and keeps surrogate refits cheap."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/rastrigin_d5/llm/seed_1/result.json",
+    "independent_online_trial": false
+  }
+}

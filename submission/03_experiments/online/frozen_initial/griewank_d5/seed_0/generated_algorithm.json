@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.55,
+    "crossover": 0.8,
+    "exploration": 0.45,
+    "local_fraction": 0.35,
+    "radius": 0.12,
+    "population": 30,
+    "generations": 6,
+    "reason": "Only 24/100 evaluations used but stagnation is high (20) with zero recent improvement, indicating the current reference design is exploiting too narrowly. Auto surrogate lets held-out RMSE pick RBF vs quadratic for a 5D problem with limited data. Keep current_to_best (good balance of convergence and diversity), but modestly lower mutation/crossover toward robust exploration and raise exploration to 0.45 so the novelty-distance term pushes candidates away from repeatedly sampled regions; local fraction stays moderate (0.35) to retain local refinement within the 0.12 normalized radius. Population 30 with 6 generations balances surrogate retraining cost under the fixed budget without requesting extra true evaluations."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/griewank_d5/llm/seed_0/result.json",
+    "independent_online_trial": false
+  }
+}

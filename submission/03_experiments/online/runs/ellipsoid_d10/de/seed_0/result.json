@@ -1,0 +1,33 @@
+{
+  "problem": "ellipsoid",
+  "method": "de",
+  "seed": 0,
+  "best_y": 323414.01107069623,
+  "best_x": [
+    -3.006970801263311,
+    3.586083134686323,
+    1.8666616349199305,
+    4.12260864211339,
+    -1.771563123624269,
+    4.621156133508041,
+    0.7168226902435713,
+    -0.2243889557510803,
+    0.38529496941393315,
+    0.48440405198054926
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.0028287000004638685,
+  "objective_seconds": 0.0011943999961658847,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "online_llm": false,
+    "objective_delay_injected": false
+  },
+  "events": []
+}

@@ -1,0 +1,49 @@
+{
+  "problem": "rastrigin",
+  "method": "saea",
+  "seed": 4,
+  "best_y": 23.824608999281605,
+  "best_x": [
+    -0.9048243192051473,
+    -0.1642197684698159,
+    0.1137460648417834,
+    0.24081076316846595,
+    0.1556112555599567
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.2387564000018756,
+  "objective_seconds": 0.001436699996702373,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/rastrigin_d5/llm/seed_4/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.35,
+        "local_fraction": 0.4,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 5,
+        "reason": "At 24/100 evaluations in 5D with 9 stagnant steps and no recent gain, I raise exploration and local_fraction to escape a flat basin, shrink population/generations to conserve the fixed budget, and keep auto surrogate with current_to_best to balance convergence and diversity; radius widened modestly since novelty heuristic may underestimate uncertainty mid-budget."
+      },
+      "source": "saea"
+    }
+  ]
+}

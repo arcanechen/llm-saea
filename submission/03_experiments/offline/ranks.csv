@@ -1,0 +1,13 @@
+﻿function,dimension,random,de,saea,adaptive
+sphere,5,4.0,3.0,1.0,2.0
+sphere,10,3.0,4.0,2.0,1.0
+ellipsoid,5,4.0,3.0,1.0,2.0
+ellipsoid,10,4.0,3.0,2.0,1.0
+rosenbrock,5,4.0,3.0,2.0,1.0
+rosenbrock,10,3.0,4.0,1.0,2.0
+rastrigin,5,3.0,4.0,2.0,1.0
+rastrigin,10,3.0,4.0,2.0,1.0
+ackley,5,4.0,3.0,1.0,2.0
+ackley,10,3.0,4.0,2.0,1.0
+griewank,5,4.0,3.0,2.0,1.0
+griewank,10,3.0,4.0,2.0,1.0

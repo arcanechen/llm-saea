@@ -1,0 +1,29 @@
+{
+  "checked_utc": "2026-10-23T06:07:36.704642+00:00",
+  "copied_source_tests": "13 passed",
+  "wheel_matches_current_source": true,
+  "all_python_sources_compile": true,
+  "pdf_pages": {
+    "02_documents\\algorithm_flow.pdf": 1,
+    "02_documents\\算法说明文档.pdf": 7,
+    "03_experiments\\实验结果报告.pdf": 9
+  },
+  "pdf_rendering": "Poppler rendering reviewed visually; no clipping or overlap found",
+  "raw_runs_verified": 300,
+  "optimization_evaluations_verified": 30000,
+  "baseline_runs_reused": 240,
+  "new_online_runs": 60,
+  "frozen_ablation_runs": 60,
+  "replay_verified_runs": 60,
+  "online_experiment_api_requests": 240,
+  "online_experiment_tokens": 239318,
+  "online_openai_verified": false,
+  "online_deepseek_verified": true,
+  "online_status": "DeepSeek full benchmark COMPLETED; 240 calls; all successful; OpenAI not live-tested",
+  "included_credentials": false,
+  "excluded": [
+    "private env files",
+    "virtual environments",
+    "build caches"
+  ]
+}

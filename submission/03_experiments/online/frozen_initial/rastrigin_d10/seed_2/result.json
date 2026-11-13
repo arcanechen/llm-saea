@@ -1,0 +1,54 @@
+{
+  "problem": "rastrigin",
+  "method": "saea",
+  "seed": 2,
+  "best_y": 68.11347009178763,
+  "best_x": [
+    2.0400348426347943,
+    0.002340911192439954,
+    -0.1566308687855953,
+    -0.09839202580058082,
+    1.4913028079568837,
+    0.1937654906387145,
+    0.22252809988404554,
+    3.033254199278704,
+    0.7748902585437465,
+    -0.9345420317279061
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.26753959999768995,
+  "objective_seconds": 0.0014413999888347462,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/rastrigin_d10/llm/seed_2/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.8,
+        "exploration": 0.45,
+        "local_fraction": 0.35,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 5,
+        "reason": "Late-stage stagnation with no recent improvement suggests the surrogate is under-exploring; increase exploration slightly and keep auto surrogate to adapt between RBF and quadratic as fit quality changes. current_to_best balances convergence with diversity in 10D, and a moderate population/generation count controls surrogate overhead within the fixed budget. Slightly larger radius preserves novelty in unexplored regions."
+      },
+      "source": "saea"
+    }
+  ]
+}

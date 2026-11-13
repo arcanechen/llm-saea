@@ -1,0 +1,54 @@
+{
+  "problem": "ackley",
+  "method": "saea",
+  "seed": 2,
+  "best_y": 3.606720582339428,
+  "best_x": [
+    0.7407890637594132,
+    -0.291786354474441,
+    -0.3981190315113867,
+    -0.09605861435003593,
+    -0.2587563775763293,
+    1.0599015695183116,
+    0.9430547590432328,
+    -0.1085847576190151,
+    -1.0203467962292567,
+    0.146286512322634
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.2661737999987963,
+  "objective_seconds": 0.0019735000059881713,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/ackley_d10/llm/seed_2/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.55,
+        "crossover": 0.85,
+        "exploration": 0.45,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 5,
+        "reason": "10-D with 24/100 evaluations spent and clear stagnation (18, zero recent improvement). Auto-surrogate hedges between RBF and quadratic as samples accumulate. current_to_best with modest mutation balances local refinement and drift from the incumbent. Raising exploration to 0.45 and radius to 0.15 injects novelty to escape the stalled region without abandoning local search (local_fraction 0.25). Population 30 x 5 generations gives cheap surrogate-driven selection each cycle, conserving the fixed true-evaluation budget."
+      },
+      "source": "saea"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "verified_runs": 240,
+  "true_evaluations": 24000,
+  "average_ranks": {
+    "random": 3.5,
+    "de": 3.5,
+    "saea": 1.6666666666666667,
+    "adaptive": 1.3333333333333333
+  },
+  "online_llm_evaluated": false,
+  "any_holm_significant": false,
+  "sum_runtime_seconds": 45.83265659999779
+}

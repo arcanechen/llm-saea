@@ -1,0 +1,50 @@
+{
+  "problem": "rastrigin",
+  "method": "saea",
+  "seed": 1,
+  "best_y": 57.57589020775797,
+  "best_x": [
+    1.0082826881542362,
+    3.104358377441444,
+    1.724544573090947,
+    2.1589044175648766,
+    0.8281248534783616,
+    -2.1248979706900264,
+    -2.0481238720443353,
+    0.07004057673460018,
+    0.9929194129226433,
+    -0.9861876391643962
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.3874626000015269,
+  "objective_seconds": 0.0013674000038008671,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "online_llm": false,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.65,
+        "crossover": 0.85,
+        "exploration": 0.2,
+        "local_fraction": 0.3,
+        "radius": 0.12,
+        "population": 40,
+        "generations": 6,
+        "reason": "Fixed reference design."
+      },
+      "source": "saea"
+    }
+  ]
+}

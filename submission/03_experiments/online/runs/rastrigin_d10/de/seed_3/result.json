@@ -1,0 +1,33 @@
+{
+  "problem": "rastrigin",
+  "method": "de",
+  "seed": 3,
+  "best_y": 99.26838084077838,
+  "best_x": [
+    1.905539349324358,
+    -2.0263683262844414,
+    -1.9658179711068966,
+    -0.7572920677612318,
+    1.0155914434115836,
+    -4.01348597502038,
+    1.2282504383462536,
+    -4.783133084290841,
+    1.093560162139961,
+    -1.7270683113919607
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.0029059999997116392,
+  "objective_seconds": 0.0011941000029764837,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "online_llm": false,
+    "objective_delay_injected": false
+  },
+  "events": []
+}

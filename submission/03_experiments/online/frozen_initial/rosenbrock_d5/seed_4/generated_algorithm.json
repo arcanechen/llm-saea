@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.55,
+    "crossover": 0.8,
+    "exploration": 0.75,
+    "local_fraction": 0.4,
+    "radius": 0.18,
+    "population": 30,
+    "generations": 5,
+    "reason": "With 24 of 100 evaluations used and stagnation at 9 with zero recent improvement, the current plan is likely over-exploiting. Increasing exploration and radius encourages novelty to escape the plateau, while auto surrogate lets held-out RMSE pick RBF vs quadratic as data accumulates. current_to_best with moderate mutation/crossover balances local refinement and exploitation of the surrogate; modest population and generations keep surrogate-assisted search cheap so remaining true evaluations are spread over more iterations."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/rosenbrock_d5/llm/seed_4/result.json",
+    "independent_online_trial": false
+  }
+}

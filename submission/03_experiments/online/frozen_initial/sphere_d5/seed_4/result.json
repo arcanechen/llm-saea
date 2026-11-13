@@ -1,0 +1,49 @@
+{
+  "problem": "sphere",
+  "method": "saea",
+  "seed": 4,
+  "best_y": 0.11899590810094964,
+  "best_x": [
+    -0.20661697699878623,
+    -0.06125164240062375,
+    -0.18045122873847852,
+    0.1483889656866113,
+    0.1340583385294991
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.3339449999984936,
+  "objective_seconds": 0.0016993999961414374,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/sphere_d5/llm/seed_4/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.45,
+        "local_fraction": 0.35,
+        "radius": 0.15,
+        "population": 36,
+        "generations": 6,
+        "reason": "Stagnation with zero recent improvement signals the reference plan is too exploitative; increase exploration and mutation modestly to escape the flat basin while keeping current_to_best for stable convergence. Auto surrogate lets held-out RMSE pick between RBF and quadratic given the small 24-sample set in 5D. Population trimmed to 36 to preserve expensive budget for more generations, and local_fraction/radius kept moderate for a balanced global-local split."
+      },
+      "source": "saea"
+    }
+  ]
+}

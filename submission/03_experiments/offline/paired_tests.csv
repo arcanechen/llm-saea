@@ -1,0 +1,13 @@
+﻿function,dimension,comparison,paired_seeds,wins,ties,losses,p_raw_two_sided,p_holm
+sphere,5,adaptive vs saea,5,2,0,3,0.625,1.0
+sphere,10,adaptive vs saea,5,3,0,2,0.3125,1.0
+ellipsoid,5,adaptive vs saea,5,1,0,4,0.3125,1.0
+ellipsoid,10,adaptive vs saea,5,2,0,3,0.625,1.0
+rosenbrock,5,adaptive vs saea,5,4,0,1,0.125,1.0
+rosenbrock,10,adaptive vs saea,5,4,0,1,0.3125,1.0
+rastrigin,5,adaptive vs saea,5,3,0,2,0.625,1.0
+rastrigin,10,adaptive vs saea,5,2,0,3,0.8125,1.0
+ackley,5,adaptive vs saea,5,1,0,4,0.125,1.0
+ackley,10,adaptive vs saea,5,3,0,2,0.8125,1.0
+griewank,5,adaptive vs saea,5,3,0,2,0.625,1.0
+griewank,10,adaptive vs saea,5,4,0,1,0.125,1.0

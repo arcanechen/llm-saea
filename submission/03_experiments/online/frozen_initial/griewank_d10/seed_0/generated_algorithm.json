@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.7,
+    "crossover": 0.9,
+    "exploration": 0.35,
+    "local_fraction": 0.25,
+    "radius": 0.15,
+    "population": 30,
+    "generations": 5,
+    "reason": "Only 24 of 100 evaluations used with stagnation at 20 and no recent improvement, so the surrogate is still data-starved and unreliable; auto adapts between RBF and quadratic as data grows. current_to_best balances guided convergence with diversity, moderate mutation/crossover sustain exploration in 10D, and slightly raised exploration with a modest local fraction/radius promotes novel sampling without overspending the fixed budget. Population/generations kept modest to avoid surrogate overcommitment."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/griewank_d10/llm/seed_0/result.json",
+    "independent_online_trial": false
+  }
+}

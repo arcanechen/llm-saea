@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.7,
+    "crossover": 0.9,
+    "exploration": 0.55,
+    "local_fraction": 0.25,
+    "radius": 0.15,
+    "population": 30,
+    "generations": 5,
+    "reason": "Stagnation at 19 evals with zero recent improvement and only 24/100 budget spent indicates premature convergence; auto surrogate adapts kernel choice to held-out RMSE, current_to_best gives balanced convergence, and a moderately higher exploration with novelty distance pushes diversity. Population/generations kept moderate to respect the limited remaining budget."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/ellipsoid_d10/llm/seed_1/result.json",
+    "independent_online_trial": false
+  }
+}

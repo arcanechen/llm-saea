@@ -1,0 +1,49 @@
+{
+  "problem": "griewank",
+  "method": "saea",
+  "seed": 2,
+  "best_y": 0.5611848778510571,
+  "best_x": [
+    2.9754464722091214,
+    -0.4560568150527402,
+    5.046327902658106,
+    -2.094911607948788,
+    -0.38681968153091617
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.3671735999996599,
+  "objective_seconds": 0.001694299982773373,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/griewank_d5/llm/seed_2/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.45,
+        "local_fraction": 0.35,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 8,
+        "reason": "Stagnation with zero recent improvement and a small 5-D budget (24/100 used) suggests shifting from pure exploitation to more exploration. Auto surrogate hedges between RBF and quadratic given limited data. current_to_best DE balances convergence and diversity; raised exploration and mutation to escape flat regions, moderate local_fraction/radius for local refinement without overcommitting, and fewer generations per cycle to adapt quickly within the fixed budget."
+      },
+      "source": "saea"
+    }
+  ]
+}

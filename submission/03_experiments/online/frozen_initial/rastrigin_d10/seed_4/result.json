@@ -1,0 +1,54 @@
+{
+  "problem": "rastrigin",
+  "method": "saea",
+  "seed": 4,
+  "best_y": 94.70410876197124,
+  "best_x": [
+    -0.9755896018072008,
+    5.057291030773828,
+    -3.327985533107653,
+    0.8924404579711833,
+    -1.9938208466613059,
+    -2.1785541246663707,
+    -1.1002745323086902,
+    -0.7925028920826369,
+    0.8335176556164319,
+    -1.185254179810379
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.2674213999998756,
+  "objective_seconds": 0.0014702000116812997,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/rastrigin_d10/llm/seed_4/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.9,
+        "exploration": 0.3,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 5,
+        "reason": "With 10D and only 24/100 evaluations, sample density is very sparse, so auto surrogate selection balances RBF flexibility against a quadratic fallback via held-out RMSE. A moderate population (30) and 5 generations keep each surrogate fit cheap while producing enough candidates; current_to_best gives focused movement toward the incumbent with mutation 0.6 for diversity. Exploration 0.3 and local_fraction 0.25 with radius 0.15 favor broad coverage early (novelty is a heuristic, not uncertainty) while reserving a small local search fraction, appropriate since no progress has been observed yet and over-exploiting a poorly fit surrogate is risky."
+      },
+      "source": "saea"
+    }
+  ]
+}

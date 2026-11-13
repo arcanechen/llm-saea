@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.6,
+    "crossover": 0.85,
+    "exploration": 0.35,
+    "local_fraction": 0.35,
+    "radius": 0.15,
+    "population": 30,
+    "generations": 5,
+    "reason": "With only 24 of 100 evaluations used in a 10-D problem and 6 stagnated steps with zero recent improvement, boosting exploration and local search helps escape the plateau. Auto surrogate adapts via held-out RMSE among RBF/quadratic. current_to_best balances convergence toward the surrogate optimum with diversity; moderate mutation and high crossover maintain sampling. A modest population/generation count limits surrogate overhead so more of the fixed budget goes to true evaluations, while exploration 0.35 and radius 0.15 balance novelty-driven exploration against exploitation."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/ackley_d10/llm/seed_4/result.json",
+    "independent_online_trial": false
+  }
+}

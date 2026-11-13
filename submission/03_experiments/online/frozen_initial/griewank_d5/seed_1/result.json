@@ -1,0 +1,49 @@
+{
+  "problem": "griewank",
+  "method": "saea",
+  "seed": 1,
+  "best_y": 0.2828289100891175,
+  "best_x": [
+    6.092175718342219,
+    -8.383257050440122,
+    0.40595553832302045,
+    -0.9057147462846444,
+    0.873219127202951
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.36971229999835487,
+  "objective_seconds": 0.0016483000035805162,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/griewank_d5/llm/seed_1/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.5,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 8,
+        "reason": "High stagnation (14 of 24 evals) with zero recent improvement and no CV signal yet, so increase exploration to 0.5 for novelty-driven diversity while keeping surrogate auto to adaptively pick RBF or quadratic. current_to_best balances convergence with diversity; moderate mutation 0.7 and crossover 0.9 suit 5D. Population 30 and 8 generations give sufficient surrogate-training samples per round within the remaining budget; modest local_fraction/radius for light local refinement without over-exploiting a possibly poor surrogate."
+      },
+      "source": "saea"
+    }
+  ]
+}

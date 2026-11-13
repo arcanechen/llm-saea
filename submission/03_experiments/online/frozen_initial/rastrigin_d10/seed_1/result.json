@@ -1,0 +1,54 @@
+{
+  "problem": "rastrigin",
+  "method": "saea",
+  "seed": 1,
+  "best_y": 79.64310163592532,
+  "best_x": [
+    1.7288910566727989,
+    0.8593066311662678,
+    0.2915464152372893,
+    -0.2082615700865711,
+    0.9424125003858661,
+    -2.892246086651647,
+    -1.0448960666245783,
+    0.43553344683732664,
+    0.055182481606594,
+    -1.8564631078524645
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.2589944999999716,
+  "objective_seconds": 0.001405600010912167,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/rastrigin_d10/llm/seed_1/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.8,
+        "crossover": 0.9,
+        "exploration": 0.5,
+        "local_fraction": 0.2,
+        "radius": 0.2,
+        "population": 30,
+        "generations": 5,
+        "reason": "With only 24 of 100 evaluations used and 19 stagnation steps with no recent improvement, more exploration is needed to escape the plateau. Raising exploration to 0.5 and radius to 0.2 favors novelty in the surrogate acquisition while keeping local exploitation moderate. A smaller population and 5 generations fit the remaining budget, and current_to_best with higher mutation/crossover balances surrogate-guided convergence with diversity. Auto surrogate selection adapts between RBF and quadratic given sparse 10D data."
+      },
+      "source": "saea"
+    }
+  ]
+}

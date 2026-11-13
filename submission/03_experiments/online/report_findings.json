@@ -1,0 +1,28 @@
+{
+  "conclusion": "在线 LLM 在 2/12 个实例上的最终中位数优于固定 SAEA，在 3/12 个实例上优于规则 SAEA。五方法平均名次为 random=4.50；de=4.50；saea=1.83；adaptive=1.58；llm=2.58。在线 LLM 对两个 SAEA 对照的 Holm 校正显著项分别为 0 和 0。这是一组小样本基准证据，不支持声称 LLM 对任意问题普遍更优。",
+  "median_wins": {
+    "saea": 2,
+    "adaptive": 3
+  },
+  "comparisons": {
+    "adaptive vs saea": {
+      "wins": 32,
+      "ties": 0,
+      "losses": 28,
+      "significant": 0
+    },
+    "llm vs saea": {
+      "wins": 14,
+      "ties": 0,
+      "losses": 46,
+      "significant": 0
+    },
+    "llm vs adaptive": {
+      "wins": 15,
+      "ties": 0,
+      "losses": 45,
+      "significant": 0
+    }
+  },
+  "live_run_seconds": 460.9872262000099
+}

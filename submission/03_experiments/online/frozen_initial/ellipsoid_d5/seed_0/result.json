@@ -1,0 +1,49 @@
+{
+  "problem": "ellipsoid",
+  "method": "saea",
+  "seed": 0,
+  "best_y": 2990.362147084301,
+  "best_x": [
+    1.987972930858911,
+    -4.942973014769025,
+    -0.5816350915702007,
+    0.22898616598162302,
+    -0.01474253437612738
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.2564324000013585,
+  "objective_seconds": 0.0022543999803019688,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/ellipsoid_d5/llm/seed_0/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.85,
+        "exploration": 0.45,
+        "local_fraction": 0.45,
+        "radius": 0.18,
+        "population": 32,
+        "generations": 5,
+        "reason": "With only 24 of 100 evaluations and 3 stagnation steps with zero recent improvement, the reference design is likely too exploitative and too costly per generation. Increasing exploration and local_fraction broadens acquisition and injects diversity to escape the plateau, while a larger radius and moderate population/generations balance surrogate-guided search against the remaining budget. Auto surrogate selection adapts between RBF and quadratic given scarce, dimension-5 data; current_to_best keeps bias toward promising regions without overcommitting."
+      },
+      "source": "saea"
+    }
+  ]
+}

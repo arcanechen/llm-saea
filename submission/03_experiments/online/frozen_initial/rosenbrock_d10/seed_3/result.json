@@ -1,0 +1,54 @@
+{
+  "problem": "rosenbrock",
+  "method": "saea",
+  "seed": 3,
+  "best_y": 51.880905577511314,
+  "best_x": [
+    -0.2253666852177627,
+    0.412536801163216,
+    0.3183397839596913,
+    -0.016448253788662548,
+    0.3960518060320224,
+    -0.11765673183870407,
+    -0.0828741388211367,
+    -0.005034381358599127,
+    -0.15491574653620876,
+    -0.019273768419456605
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.277266499997495,
+  "objective_seconds": 0.0015051999907882418,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/rosenbrock_d10/llm/seed_3/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.5,
+        "crossover": 0.7,
+        "exploration": 0.6,
+        "local_fraction": 0.4,
+        "radius": 0.15,
+        "population": 32,
+        "generations": 5,
+        "reason": "10D problem with only 24/100 evaluations used, so surrogate must extrapolate from sparse data; auto lets hold-out RMSE pick RBF vs quadratic. Stagnation of 15 with zero recent improvement suggests the current plan is over-exploiting, so raise exploration to 0.6 and local_fraction to 0.4 to inject novelty while keeping radius moderate for local refinement. current_to_best operator balances convergence toward the best surrogate candidate with diversity; moderate mutation (0.5) and crossover (0.7) avoid premature collapse. Cap population at 32 and generations at 5 to respect the remaining 76 true evaluations."
+      },
+      "source": "saea"
+    }
+  ]
+}

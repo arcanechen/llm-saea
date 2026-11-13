@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.7,
+    "crossover": 0.9,
+    "exploration": 0.6,
+    "local_fraction": 0.4,
+    "radius": 0.15,
+    "population": 30,
+    "generations": 8,
+    "reason": "High stagnation (23) with zero recent improvement means the current plan over-exploits; raising exploration to 0.6 and local_fraction to 0.4 pushes novelty-driven sampling in under-covered regions while radius 0.15 keeps local refinement feasible in 5D. auto surrogate adapts between RBF and quadratic given sparse 24-point data; current_to_best with strong crossover (0.9) balances convergence and diversity without extra true evaluations. Population 30 and 8 generations fit the remaining ~76 evaluation budget with surrogate screening."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/ackley_d5/llm/seed_3/result.json",
+    "independent_online_trial": false
+  }
+}

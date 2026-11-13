@@ -1,0 +1,54 @@
+{
+  "problem": "sphere",
+  "method": "saea",
+  "seed": 3,
+  "best_y": 3.042584076428619,
+  "best_x": [
+    -0.4486936259396188,
+    -0.7465654413030309,
+    0.5135285063037651,
+    0.21106414444790644,
+    -0.9249388329910788,
+    -0.1321984855801812,
+    -0.3058285464137356,
+    -0.5520659242418642,
+    -0.7491818824774015,
+    0.37824447987531506
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.31598879999728524,
+  "objective_seconds": 0.0014744999971298967,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/sphere_d10/llm/seed_3/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.45,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 36,
+        "generations": 5,
+        "reason": "With only 24 of 100 evaluations used and 10 stagnant steps with zero recent improvement, increase exploration moderately to escape a plateau while keeping current_to_best for reliable convergence. Auto surrogate adapts between RBF and quadratic via held-out RMSE given limited 10-D data. Moderate mutation/crossover balances diversity and exploitation; modest local_fraction/radius adds intensification without starving global search. Population 36 and 5 generations keep surrogate overhead reasonable within the fixed budget."
+      },
+      "source": "saea"
+    }
+  ]
+}

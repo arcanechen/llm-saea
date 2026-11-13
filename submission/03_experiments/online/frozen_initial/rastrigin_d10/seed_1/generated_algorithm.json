@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.8,
+    "crossover": 0.9,
+    "exploration": 0.5,
+    "local_fraction": 0.2,
+    "radius": 0.2,
+    "population": 30,
+    "generations": 5,
+    "reason": "With only 24 of 100 evaluations used and 19 stagnation steps with no recent improvement, more exploration is needed to escape the plateau. Raising exploration to 0.5 and radius to 0.2 favors novelty in the surrogate acquisition while keeping local exploitation moderate. A smaller population and 5 generations fit the remaining budget, and current_to_best with higher mutation/crossover balances surrogate-guided convergence with diversity. Auto surrogate selection adapts between RBF and quadratic given sparse 10D data."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/rastrigin_d10/llm/seed_1/result.json",
+    "independent_online_trial": false
+  }
+}

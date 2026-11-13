@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.7,
+    "crossover": 0.9,
+    "exploration": 0.45,
+    "local_fraction": 0.25,
+    "radius": 0.15,
+    "population": 32,
+    "generations": 6,
+    "reason": "With only 24 of 100 evaluations used and stagnation of 18 with zero recent improvement, the search needs more exploration to escape a flat/plateaued region while staying within the modest budget. Auto surrogate hedges between RBF and quadratic early when data is sparse. current_to_best with slightly higher mutation and near-1 crossover balances convergence with diversity; exploration raised to 0.45 lets novelty break ties for under-sampled regions. local_fraction moderate at 0.25 avoids over-exploiting the stalled incumbent; radius 0.15 keeps local searches compact in normalized space. Population 32 and 6 generations keep per-cycle true evaluations reasonable so most budget remains for adaptation."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/rastrigin_d10/llm/seed_3/result.json",
+    "independent_online_trial": false
+  }
+}

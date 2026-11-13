@@ -1,0 +1,54 @@
+{
+  "problem": "griewank",
+  "method": "saea",
+  "seed": 4,
+  "best_y": 0.9641919191003032,
+  "best_x": [
+    -10.224841755807411,
+    0.8658343558458981,
+    11.29798414839808,
+    0.8047054873777455,
+    8.170414475708867,
+    9.175145548579621,
+    0.05619590980767697,
+    -2.844001844501065,
+    -8.971447913606326,
+    -2.0271137460377346
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.25592580000011367,
+  "objective_seconds": 0.0017293000055360608,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/griewank_d10/llm/seed_4/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.55,
+        "crossover": 0.9,
+        "exploration": 0.45,
+        "local_fraction": 0.25,
+        "radius": 0.1,
+        "population": 30,
+        "generations": 5,
+        "reason": "With 10D and only 24/100 evaluations, a mid-size population (30) and few surrogate generations conserve the expensive budget while giving the auto surrogate enough samples to pick RBF vs quadratic. Stagnation at 6 with zero recent improvement indicates the search is stalling, so I raise exploration (0.45) relative to the reference plan to favor novelty over predicted-objective exploitation, keep a modest local fraction with a small radius for local refinement, and use current_to_best to balance convergence and diversity without premature collapse from best1."
+      },
+      "source": "saea"
+    }
+  ]
+}

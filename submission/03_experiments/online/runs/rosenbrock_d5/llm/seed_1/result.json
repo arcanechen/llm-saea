@@ -1,0 +1,95 @@
+{
+  "problem": "rosenbrock",
+  "method": "llm",
+  "seed": 1,
+  "best_y": 13.002370015121222,
+  "best_x": [
+    0.8348638215499813,
+    0.9957073414728828,
+    0.9309631524105826,
+    1.0472042506302253,
+    1.031735151412101
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 7.197418800002197,
+  "objective_seconds": 0.0017635999938647728,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 4,
+    "llm_provider": "deepseek",
+    "llm_model": "deepseek-flash",
+    "online_llm": true,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.45,
+        "local_fraction": 0.5,
+        "radius": 0.2,
+        "population": 30,
+        "generations": 8,
+        "reason": "Stagnation high (19) with zero recent improvement, so increasing exploration to 0.45 and local_fraction/radius pushes sampling toward novel and local-refined regions. Auto surrogate adapts between RBF and quadratic since only 24 evals of 100 used and dimension 5; current_to_best balances convergence with diversity. Moderate population (30) and generations (8) keep surrogate overhead small relative to remaining 76 true evaluations."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 44,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.85,
+        "local_fraction": 0.35,
+        "radius": 0.15,
+        "population": 28,
+        "generations": 8,
+        "reason": "Long stagnation (39) with zero recent improvement means the search is stuck; raise exploration substantially so acquisition favors novel distances over predicted objective, and keep moderate local_fraction/radius for localized refinement. Surrogate auto adapts between RBF and quadratic as the 44 points accumulate in 5D, and CV RMSE near 0.96 suggests the model is weak, so leaning on novelty rather than over-trusting predictions is safer. current_to_best balances convergence with diversity; moderate population/generations keep surrogate overhead small versus remaining 56 true evaluations."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 64,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "rand1",
+        "mutation": 0.9,
+        "crossover": 0.7,
+        "exploration": 1.4,
+        "local_fraction": 0.2,
+        "radius": 0.2,
+        "population": 30,
+        "generations": 6,
+        "reason": "Severe stagnation (59 evals, zero recent improvement) with only 36 true evaluations left means exploitation has failed; shift heavily toward exploration via high novelty weight and rand1 to diversify away from a stuck basin. CV RMSE ~0.85 indicates the surrogate is unreliable, so auto selection with modest reliance and a larger exploration term is safer than trusting predictions. Lower local_fraction/radius avoids wasting remaining budget on a stale neighborhood; moderate population/generations keep surrogate overhead small."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 84,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.85,
+        "exploration": 0.8,
+        "local_fraction": 0.15,
+        "radius": 0.12,
+        "population": 28,
+        "generations": 5,
+        "reason": "Only 16 evaluations remain and recent improvement is zero with 10 stagnation steps, so the prior rand1-heavy exploration has not paid off quickly. Switch to current_to_best for balanced convergence while keeping a moderate exploration weight (0.8) since the surrogate CV RMSE ~0.60 is still noisy and predictions should be discounted. Auto selection hedges between RBF and quadratic. Reduce local_fraction/radius to avoid re-searching a stale basin, and keep population/generations modest to limit surrogate overhead under a tight budget."
+      },
+      "source": "deepseek"
+    }
+  ]
+}

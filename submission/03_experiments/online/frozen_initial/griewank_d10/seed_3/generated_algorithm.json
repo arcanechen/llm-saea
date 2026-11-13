@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.7,
+    "crossover": 0.9,
+    "exploration": 0.35,
+    "local_fraction": 0.25,
+    "radius": 0.15,
+    "population": 30,
+    "generations": 5,
+    "reason": "24 of 100 evaluations done, so data is scarce and a sample-size-dependent choice is best; auto lets held-out RMSE pick RBF vs quadratic while rbf length-scale selection adds flexibility. Stagnation of 10 with zero recent improvement suggests we should avoid over-exploiting a poorly fit surrogate: raise exploration modestly and keep a moderate local_fraction so some search stays near the incumbent but not too concentrated. current_to_best DE balances exploitation of the best with directional diversity and is robust in 10D. Moderate mutation/crossover maintain diversity; population 30 and 5 generations keep surrogate refits cheap within the fixed budget. Radius 0.15 in normalized coordinates is a reasonable novelty scale for local sampling. No extra evaluations requested."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/griewank_d10/llm/seed_3/result.json",
+    "independent_online_trial": false
+  }
+}

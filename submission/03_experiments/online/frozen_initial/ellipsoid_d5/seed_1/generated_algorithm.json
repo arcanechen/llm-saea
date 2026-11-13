@@ -1,0 +1,19 @@
+{
+  "plan": {
+    "surrogate": "auto",
+    "operator": "current_to_best",
+    "mutation": 0.7,
+    "crossover": 0.9,
+    "exploration": 0.45,
+    "local_fraction": 0.45,
+    "radius": 0.18,
+    "population": 30,
+    "generations": 5,
+    "reason": "Stagnation with zero recent improvement in 5D at 24/100 evals suggests the fixed design is too exploitative. Auto surrogate adapts between RBF and quadratic via held-out RMSE, which is safer than committing early with sparse data. Current_to_best balances convergence and diversity; increased exploration (0.45) and local_fraction (0.45) with a larger radius (0.18) inject novelty to escape the plateau while keeping surrogate exploitation. Population 30 and 5 generations give enough candidates without overspending the fixed budget."
+  },
+  "provenance": {
+    "source": "deepseek_first_plan_frozen",
+    "live_result": "runs/ellipsoid_d5/llm/seed_1/result.json",
+    "independent_online_trial": false
+  }
+}

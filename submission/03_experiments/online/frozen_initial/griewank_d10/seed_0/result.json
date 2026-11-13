@@ -1,0 +1,54 @@
+{
+  "problem": "griewank",
+  "method": "saea",
+  "seed": 0,
+  "best_y": 1.0905685513545114,
+  "best_x": [
+    -1.4945453331335372,
+    4.698435071166905,
+    3.376896174162326,
+    -1.653235613236916,
+    -6.107901120428075,
+    4.6767972828822835,
+    -10.78521851645138,
+    -9.41153787207886,
+    6.741763551591198,
+    3.10930912202528
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.27707939999891096,
+  "objective_seconds": 0.0016682999812474009,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "llm_provider": null,
+    "llm_model": null,
+    "online_llm": false,
+    "objective_delay_injected": false,
+    "ablation": "freeze first live plan; no further model calls",
+    "source_live_run": "runs/griewank_d10/llm/seed_0/result.json"
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.35,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 5,
+        "reason": "Only 24 of 100 evaluations used with stagnation at 20 and no recent improvement, so the surrogate is still data-starved and unreliable; auto adapts between RBF and quadratic as data grows. current_to_best balances guided convergence with diversity, moderate mutation/crossover sustain exploration in 10D, and slightly raised exploration with a modest local fraction/radius promotes novel sampling without overspending the fixed budget. Population/generations kept modest to avoid surrogate overcommitment."
+      },
+      "source": "saea"
+    }
+  ]
+}

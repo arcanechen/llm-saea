@@ -1,0 +1,33 @@
+{
+  "problem": "rosenbrock",
+  "method": "random",
+  "seed": 1,
+  "best_y": 551.1358970476196,
+  "best_x": [
+    0.700575873446025,
+    0.47587116238117844,
+    0.5176535394512207,
+    0.48628204286181864,
+    0.7913696598461022,
+    -0.7208851007608705,
+    -0.930891639809792,
+    0.02770086093216184,
+    0.5211357913928891,
+    -0.027827487034828957
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 0.003697100000863429,
+  "objective_seconds": 0.0017185999968205579,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 0,
+    "online_llm": false,
+    "objective_delay_injected": false
+  },
+  "events": []
+}

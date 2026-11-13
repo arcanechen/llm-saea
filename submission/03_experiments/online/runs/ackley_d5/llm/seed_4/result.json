@@ -1,0 +1,95 @@
+{
+  "problem": "ackley",
+  "method": "llm",
+  "seed": 4,
+  "best_y": 2.6575830580267454,
+  "best_x": [
+    0.1682788370130286,
+    0.0529195624340133,
+    -0.14331107647903263,
+    -0.2568807294436475,
+    -0.6343457428809511
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 8.129555999999866,
+  "objective_seconds": 0.0023958000310813077,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 4,
+    "llm_provider": "deepseek",
+    "llm_model": "deepseek-flash",
+    "online_llm": true,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.55,
+        "crossover": 0.8,
+        "exploration": 0.45,
+        "local_fraction": 0.35,
+        "radius": 0.18,
+        "population": 36,
+        "generations": 6,
+        "reason": "With only 24 of 100 evaluations used and 9 stagnant steps, increase exploration and radius to escape the stalled basin while keeping exploitation from current_to_best. Auto surrogate adapts between RBF and quadratic as data grows; moderate population and generations fit the remaining budget without extra true evaluations. Lower mutation slightly to stabilize convergence once novelty-driven candidates are screened."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 44,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.85,
+        "exploration": 0.55,
+        "local_fraction": 0.4,
+        "radius": 0.16,
+        "population": 34,
+        "generations": 5,
+        "reason": "44/100 evaluations used with recent relative improvement 0.168 but 5 stagnant steps; CV-normalized RMSE 0.255 suggests the surrogate is moderately accurate, so slightly raise exploration to screen novel candidates near the stalled basin while retaining current_to_best exploitation. Auto surrogate adapts between RBF and quadratic as samples grow. Moderate population/generations keep surrogate screening within the fixed budget without extra true evaluations; radius and local_fraction balance local refinement against escape."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 64,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.85,
+        "exploration": 0.75,
+        "local_fraction": 0.35,
+        "radius": 0.14,
+        "population": 32,
+        "generations": 5,
+        "reason": "64/100 evaluations used with strong recent relative improvement 0.308 but 3 stagnant steps; CV-normalized RMSE 0.506 indicates the surrogate is only moderately accurate, so modestly raise exploration to screen novel candidates while keeping current_to_best for exploitation. Auto surrogate adapts between RBF and quadratic as samples accumulate. Moderate population/generations and a slightly reduced radius/local_fraction maintain local refinement around the promising basin without overspending the fixed budget."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 84,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.6,
+        "crossover": 0.8,
+        "exploration": 0.9,
+        "local_fraction": 0.3,
+        "radius": 0.12,
+        "population": 30,
+        "generations": 5,
+        "reason": "Near the end of the budget (84/100) with 23 stagnant steps and zero recent improvement, exploitation must be paired with enough novelty to escape a plateau. CV-normalized RMSE 0.48 is moderate, so auto surrogate is kept to let held-out RMSE pick RBF vs quadratic. current_to_best balances convergence toward the incumbent with DE diversity; exploration 0.9 moderately favors novel candidates since progress has stalled, while local_fraction 0.3 and radius 0.12 keep most sampling local to the promising basin without exhausting the fixed budget. Population/generations stay modest because only ~16 true evaluations remain."
+      },
+      "source": "deepseek"
+    }
+  ]
+}

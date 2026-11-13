@@ -1,0 +1,100 @@
+{
+  "problem": "griewank",
+  "method": "llm",
+  "seed": 1,
+  "best_y": 1.0683209093524544,
+  "best_x": [
+    -11.854725450497519,
+    2.761087915187531,
+    -10.5833577322216,
+    -1.0671434939401507,
+    -5.296994853586462,
+    2.019434989361855,
+    0.380587149669779,
+    2.4452046243495076,
+    8.676923928077606,
+    -11.797167670681006
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 7.120316100001219,
+  "objective_seconds": 0.0020197000121697783,
+  "metadata": {
+    "budget": 100,
+    "dimension": 10,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 4,
+    "llm_provider": "deepseek",
+    "llm_model": "deepseek-flash",
+    "online_llm": true,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.8,
+        "crossover": 0.9,
+        "exploration": 0.6,
+        "local_fraction": 0.4,
+        "radius": 0.2,
+        "population": 30,
+        "generations": 8,
+        "reason": "High-dim (10-D) with severe stagnation and no recent improvement, so shift toward exploration: raise exploration weight and mutation, widen radius, and use current_to_best for directed but still diverse search. Smaller population with more generations suits a tight 100-eval budget (24 used). Auto surrogate adapts RBF vs quadratic by held-out RMSE to avoid committing to a poor model early."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 44,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.9,
+        "crossover": 0.85,
+        "exploration": 0.9,
+        "local_fraction": 0.35,
+        "radius": 0.25,
+        "population": 28,
+        "generations": 10,
+        "reason": "Seventh stagnation step with 44/100 evaluations consumed and CV RMSE 0.455, so the surrogate is only moderately reliable. Boost exploration weight and mutation to escape the plateau while keeping current_to_best for directed moves; auto lets held-out RMSE pick RBF vs quadratic without overcommitting. Moderate population and more generations fit the remaining budget, and a wider radius favors coverage over premature local refinement."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 64,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.8,
+        "crossover": 0.85,
+        "exploration": 0.5,
+        "local_fraction": 0.3,
+        "radius": 0.18,
+        "population": 24,
+        "generations": 8,
+        "reason": "CV RMSE improved to 0.32 and recent relative improvement is modest with stagnation 8, so the surrogate is becoming more trustworthy but a plateau remains. Keep auto to let held-out RMSE arbitrate RBF vs quadratic, and current_to_best for directed convergence. Moderate mutation and exploration still allow escape, while slightly reduced population/generations and a tighter radius balance coverage against local refinement under the remaining ~36 evaluations."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 84,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.85,
+        "exploration": 0.25,
+        "local_fraction": 0.45,
+        "radius": 0.1,
+        "population": 20,
+        "generations": 4,
+        "reason": "With only ~16 evaluations left, the plan should shift toward exploitation. CV RMSE of 0.32 is moderate, so auto still arbitrates RBF vs quadratic safely. Recent relative improvement is decent (0.13) but stagnation is 6, favoring directed current_to_best with lowered mutation 0.7 and exploration 0.25 to exploit the surrogate. A tighter radius 0.1 and higher local_fraction 0.45 concentrate sampling near the incumbent for final refinement, while smaller population/generations (20/4) keep per-call cost low given the tight budget."
+      },
+      "source": "deepseek"
+    }
+  ]
+}

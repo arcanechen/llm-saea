@@ -1,0 +1,95 @@
+{
+  "problem": "griewank",
+  "method": "llm",
+  "seed": 1,
+  "best_y": 0.4659055803539389,
+  "best_x": [
+    6.230103348479773,
+    1.0132733262101183,
+    -0.5639165802957535,
+    -7.384756392301931,
+    7.7877391450109315
+  ],
+  "evaluations": 100,
+  "elapsed_seconds": 7.726530899999489,
+  "objective_seconds": 0.0020433000063349027,
+  "metadata": {
+    "budget": 100,
+    "dimension": 5,
+    "n_initial": 24,
+    "design_interval": 20,
+    "max_designs": 4,
+    "refit_interval": 3,
+    "policy_calls": 4,
+    "llm_provider": "deepseek",
+    "llm_model": "deepseek-flash",
+    "online_llm": true,
+    "objective_delay_injected": false
+  },
+  "events": [
+    {
+      "at_evaluation": 24,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.9,
+        "exploration": 0.5,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 30,
+        "generations": 8,
+        "reason": "High stagnation (14 of 24 evals) with zero recent improvement and no CV signal yet, so increase exploration to 0.5 for novelty-driven diversity while keeping surrogate auto to adaptively pick RBF or quadratic. current_to_best balances convergence with diversity; moderate mutation 0.7 and crossover 0.9 suit 5D. Population 30 and 8 generations give sufficient surrogate-training samples per round within the remaining budget; modest local_fraction/radius for light local refinement without over-exploiting a possibly poor surrogate."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 44,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.75,
+        "crossover": 0.9,
+        "exploration": 0.8,
+        "local_fraction": 0.2,
+        "radius": 0.12,
+        "population": 24,
+        "generations": 6,
+        "reason": "Stagnation is 17 evals with zero recent improvement and normalized CV RMSE near 0.79, indicating the surrogate is still weak and exploitation is stalling. I raise exploration to 0.8 to emphasize novelty (nearest-sample distance) and diversify proposals, keep surrogate auto to let held-out RMSE choose between RBF and quadratic, and use current_to_best with moderate mutation to retain adaptive convergence pressure. Population 24 and 6 generations keep surrogate retraining affordable within the remaining 56 evaluations, while modest local_fraction/radius allow only light refinement around promising points to avoid over-exploiting an unreliable model."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 64,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "rand1",
+        "mutation": 0.9,
+        "crossover": 0.7,
+        "exploration": 1.2,
+        "local_fraction": 0.15,
+        "radius": 0.15,
+        "population": 20,
+        "generations": 5,
+        "reason": "Stagnation is high (37 evals, zero recent improvement) and CV normalized RMSE 0.58 signals a moderately unreliable surrogate, so exploitation pressure must stay low. Switch to rand1 with higher mutation and exploration 1.2 to prioritize novelty via nearest-sample distance and escape the stalled basin; auto keeps surrogate selection data-driven. Population 20 and 5 generations fit the remaining 36 evaluations while keeping retraining cheap, and small local_fraction/radius allow only light refinement without trusting a weak model."
+      },
+      "source": "deepseek"
+    },
+    {
+      "at_evaluation": 84,
+      "plan": {
+        "surrogate": "auto",
+        "operator": "current_to_best",
+        "mutation": 0.7,
+        "crossover": 0.8,
+        "exploration": 1.5,
+        "local_fraction": 0.25,
+        "radius": 0.15,
+        "population": 16,
+        "generations": 4,
+        "reason": "With only 16 true evaluations left and severe stagnation (57 evals, zero recent improvement), the plan must balance escaping the stalled basin against cheap refinement. CV normalized RMSE ~0.45 indicates a moderately unreliable surrogate, so exploration stays moderately high (1.5) to lean on nearest-sample novelty while standardized predictions still guide. current_to_best gives a balanced exploitation-exploration DE step; auto keeps surrogate selection data-driven across RBF/quadratic. Population 16 and 4 generations keep retraining and surrogate queries cheap within budget, and local_fraction/radius allow light local refinement around promising points without over-trusting a weak model."
+      },
+      "source": "deepseek"
+    }
+  ]
+}
